@@ -1,0 +1,236 @@
+body {
+	background-color: #f2f2f2;
+	margin: 0px;
+	font-family: "Hind Guntur", sans-serif;
+	color: #444;
+}
+p {
+	line-height: 135%;
+	margin-top:9px;
+	margin-bottom: 25px;
+	font-size: 18px;
+}
+#content {
+	background-color: #d15353;
+	max-width: 1120px;
+	width: 95%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 50px;
+	margin-bottom: 30px;
+	border-radius: 23px;
+	box-shadow: 0px 5px 15px #888888;
+	padding-top: 25px;
+	padding-bottom: 50px;
+	padding-left: 30px;
+	padding-right: 30px;
+	display: flex;
+	flex-wrap: wrap;
+	transition: filter 1s ease-in-out;
+}
+@media only screen and (min-width: 860px) and (max-width: 1205px){
+  #content {
+	padding-left: 2vw;
+	padding-right: 2vw;
+  }
+}
+@media only screen and (max-width: 859px){
+  #content {
+	padding-left: 1.5vw;
+	padding-right: 1.5vw;
+	padding-top: 7px;
+  }
+}
+.icon {
+	width: 32px;
+	height: 32px;
+	display: inline-block;
+	background-size: 65%;
+	background-repeat: no-repeat;
+	background-position: center;
+	transform: translate(0px, 12px);
+	margin-right: 14px;
+	padding: 6px;
+	border: 1.3px solid #444;
+	border-radius: 50%;
+}
+#educationIcon {
+	background-image: url('../images/education.svg');
+}
+#experienceIcon {
+	background-image: url('../images/experience.svg');
+}
+#skillsIcon {
+	background-image: url('../images/skills.svg');
+}
+#awardsIcon {
+	background-image: url('../images/awards.svg');
+}
+h3 {
+	font-size: 70px;
+	margin: 0px;
+	font-family: 'Zilla Slab' ,serif;
+	font-weight: 400;
+}
+h5 {
+	font-family: 'Zilla Slab' ,serif;
+	margin: 0px;
+	margin-bottom: 35px;
+	font-size: 28px;
+}
+.box {
+	background-color: #FFF;
+	padding: 18px 30px 25px;
+	color: #444;
+	font-size: 18px;
+}
+.box h4 {
+	margin-bottom: 10px;
+	line-height: 1.4;
+}
+time {
+	color: #777;
+}
+.column {
+	width: 50%;
+	min-width: 360px;
+}
+@media only screen and (max-width: 859px){
+  .column {
+	width: 100%;
+  }
+}
+#info h4 {
+	font-size: 20px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	font-weight: 100;
+	line-height: 1.2;
+}
+#info #whatIDo {
+	margin-bottom: 14px;
+	font-size: 25px;
+	font-weight: 700;
+}
+#info #whoIAm {
+	margin-bottom: 14px;
+}
+#info span {
+	padding-right: 14px;
+	padding-left: 14px;
+	font-weight: 100;
+}
+hr {
+	background-color: #FFF;
+	margin-bottom: 19px;
+	height: 1px;
+	border: none;
+}
+section {
+	width: auto;
+	display: block;
+	margin-left: 2%;
+	margin-right: 2%;
+	margin-top: 15px;
+	margin-bottom: 10px;
+	border-radius: 15px;
+	padding: 20px;
+	padding-top: 0px;
+	color: #FFF;
+}
+.company {
+	color: #f2511b;
+	font-weight: bold;
+}
+.socialLink {
+	background-color: #8e3030;
+	padding: 7px 25px 4px;
+	margin: 7px 15px 0px 0px;
+	border-radius: 5px;
+	color: #FFF;
+	text-decoration: none;
+	display: inline-block;
+	display: inline-block;
+}
+/**********************************INTRO***********************************/
+#intro {
+	color: white;
+	background-color: #dbdbdb;
+	padding: 20px 40px;
+	border-radius: 5px;
+	margin: 20px;
+	overflow: hidden;
+	transition: height 0.2s ease-out;
+	max-width: 700px;
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	color: #444;
+	transition: filter 1s ease-in-out, height 0.5s ease-in-out;
+}
+#theTour {
+	color: #FFF;
+	background-color: #1ecc00;
+	padding: 6px 11px 6px;
+	border-radius: 4px;
+	font-weight: bold;
+}
+#theTour:hover {
+	background-color: #1cc100;
+	cursor: pointer;
+}
+h1 {
+	font-family: 'Zilla Slab', serif;
+}
+/**********************************THE TOUR***********************************/
+#overlay {
+	visibility: hidden;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255,255,255,0.7);
+	z-index: 500;
+	top: 0px;
+	transition: visibility 1s, opacity 1s ease-in-out;
+	opacity: 0;
+}
+#close {
+	margin: 35px;
+	margin-top: 15px;
+	text-align: right;
+}
+#closeButton {
+	color: #888;
+	font-size: 20px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: color 0.2s ease-in-out;
+}
+#closeButton:hover {
+	color: #555;
+}
+#tourStop1 {
+	background-image: url('../images/doublearrow.svg');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	max-width: 1170px;
+	width: 95%;
+	height: 20vh;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	margin-top: 25vh;
+}
+/**********************************Download***********************************/
+#download {
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 80px;
+	text-align: center;
+	transition: filter 1s ease-in-out,
+}
+#download a {
+	color: #d15353;
+}
