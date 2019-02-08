@@ -83,6 +83,13 @@ h5 {
 	padding: 18px 30px 25px;
 	color: #444;
 	font-size: 18px;
+	position: relative;
+	overflow: hidden;
+}
+@media only screen and (max-width: 859px){
+  #experience {
+	margin-bottom: 0px;
+  }
 }
 .box h4 {
 	margin-bottom: 10px;
@@ -142,7 +149,7 @@ section {
 	color: #f2511b;
 	font-weight: bold;
 }
-.socialLink {
+.social-link {
 	background-color: #8e3030;
 	padding: 7px 25px 4px;
 	margin: 7px 15px 0px 0px;
@@ -151,6 +158,22 @@ section {
 	text-decoration: none;
 	display: inline-block;
 	display: inline-block;
+}
+.social-link-last {
+	margin-right: 0px !important;
+}
+@media only screen and (max-width: 859px){
+  .social-link {
+	padding: 6px 20px 3px;
+	margin: 7px 9px 0px 0px;
+  }
+}
+.collapse-button {
+	position: absolute;
+    right: 18px;
+	top: 18px;
+	color: #888;
+	font-size: 24px;
 }
 /**********************************INTRO***********************************/
 #intro {
@@ -210,7 +233,7 @@ h1 {
 #closeButton:hover {
 	color: #555;
 }
-#tourStop1 {
+#tour-stop-1 {
 	background-image: url('../images/doublearrow.svg');
 	background-size: contain;
 	background-repeat: no-repeat;
