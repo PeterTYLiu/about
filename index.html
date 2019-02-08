@@ -26,6 +26,23 @@
 				document.getElementById('intro').style.filter='inherit';
 				document.getElementById('download').style.filter='inherit';
 			}
+			function collapseBox(event) {
+				let button = event.target;
+				let box = button.parentElement;
+				if (button.classList.contains('fa-minus-circle')) {
+					button.classList.remove('fa-minus-circle');
+					button.classList.add('fa-plus-circle');
+				} else {
+					button.classList.add('fa-minus-circle');
+					button.classList.remove('fa-plus-circle');
+				}
+				let collapsedHeight = '60px'
+				if (box.style.height==collapsedHeight) {
+					box.style.height='auto';
+				} else {
+					box.style.height=collapsedHeight;
+				}
+			}
 		</script>
 	</head>
 	<body>
@@ -33,7 +50,7 @@
 			<div id="close">
 				<span onclick="endTour()" id="closeButton"><i class="fas fa-times"></i> Exit</span>
 			</div>
-			<div class="tourStop" id="tourStop1">
+			<div class="tour-stop" id="tour-stop-1">
 				<h4>Responsive Design!<h4>
 				<h4>Made with CSS3 flexbox and optimized for desktop, tablet, and mobile. Try resizing your browser window!<h4>
 			</div>
@@ -53,19 +70,19 @@
 					<hr />
 					<h4>647-986-5086</h4>
 					<h4>Peter.TY.Liu@gmail.com</h4>
-					<a class="socialLink" href="https://www.facebook.com/peter.liu.583">Facebook</a>
-					<a class="socialLink" href="https://www.linkedin.com/in/peter-ty-liu/">LinkedIn</a>
-					<a class="socialLink" href="https://peterliu.myportfolio.com/">Portfolio</a>
+					<a class="social-link" href="https://www.facebook.com/peter.liu.583">Facebook</a>
+					<a class="social-link" href="https://www.linkedin.com/in/peter-ty-liu/">LinkedIn</a>
+					<a class="social-link social-link-last" href="https://peterliu.myportfolio.com/">Portfolio</a>
 				</section>
 				<section id="experience" class="box">
-					<h5><span class='icon' id='experienceIcon'></span>Experience</h5>
+					<h5><span class='icon' id='experienceIcon'></span>Experience</h5><i class="collapse-button fas fa-minus-circle" onclick="collapseBox(event)"></i>
 					<h4>Fairfax Financial, FairVentures Innovation Lab / <span class='company'>UX Designer</span></h4>
 					<time>SEPT - DEC 2017,  KITCHENER, ON</time>
 					<p>Ideated and designed mobile apps utilizing emerging technologies; created interactive high-fidelity prototypes using Figma, and user-tested with stakeholders; created microsite for internal hackathon; participated in several design sprints</p>
 					<h4>Clear Spider / <span class='company'>UI/UX Designer</span></h4>
 					<time>MAY - AUG 2017,  MISSISSAUGA, ON</time>
 					<p>Completed thorough usability assessment and UI/UX redesign of the company’s software platform, created multiple iterative interactive prototypes using Adobe XD and PHP on XAMPP</p>
-					<h4>TEledyne DALSA / <span class='company'>Web Communications Designer</span></h4>
+					<h4>Teledyne DALSA / <span class='company'>Web Communications Designer</span></h4>
 					<time>SEPT - DEC 2016,  WATERLOO, ON</time>
 					<p>Designed graphics and marketing material for trade show presentations; designed and created webpages for company’s redesigned website in collaboration with San Francisco unit</p>
 					<h4>City of Kingston / <span class='company'>GIS Intern</span></h4>
@@ -75,7 +92,7 @@
 			</div>
 			<div class="column">
 				<section id="skills" class="box">
-					<h5><span class= 'icon' id='skillsIcon'></span>Skills</h5>
+					<h5><span class= 'icon' id='skillsIcon'></span>Skills</h5><i class="collapse-button fas fa-minus-circle" onclick="collapseBox(event)"></i>
 					<p><span class="company">WEB: </span>Semantic HTML5, CSS3, SCSS, Javascript (Vanilla, jQuery, React.js), PHP, Bootstrap, Wordpress, responsive web design</p>
 					<p><span class="company">DESIGN: </span>Adobe suite including Photoshop, Illustrator, Premiere Pro; SketchUp</p>
 					<p><span class="company">UI: </span>Adobe XD, Figma, InVision, various wireframing tools </p>
@@ -83,7 +100,7 @@
 					<p><span class="company">LANGUAGE: </span>Fluent in English and Mandarin Chinese</p>
 				</section>
 				<section id="awards" class="box">
-					<h5><span class='icon' id='awardsIcon'></span>Awards and Prizes</h5>
+					<h5><span class='icon' id='awardsIcon'></span>Awards and Prizes</h5><i class="collapse-button fas fa-minus-circle" onclick="collapseBox(event)"></i>
 					<h4>Communitech Code/Design to Win / <span class='company'>1<sup>st</sup> Place, Design to Win</span></h4>
 					<time>JAN 2019, KITCHENER, ON</time>
 					<p>Competed in a UX design challenge against 25 other finalists, selected from several hundred competitors across Canada. Finished 1st overall with $5000 prize.</p>
@@ -95,7 +112,7 @@
 					<p>Competed in a social innovation challenge; awarded a St. Paul’s GreenHouse fellowship with $1000 in funding</p>
 				</section>
 				<section id="education" class="box">
-					<h5><span class='icon' id='educationIcon'></span>Education</h5>
+					<h5><span class='icon' id='educationIcon'></span>Education</h5><i class="collapse-button fas fa-minus-circle" onclick="collapseBox(event)"></i>
 					<h4>University of Waterloo / <span class='company'>Honours Planning and Economics Co-op</span></h4>
 					<time>2013 - 2018,  WATERLOO, ON</time>
 					<p>Bachelors of Environmental Science, Honours Planning Co-op and Honours Economics</p>
