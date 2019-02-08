@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://fonts.googleapis.com/css?family=Zilla+Slab|Hind+Guntur" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+		<link href="css/style.css" rel="stylesheet">
+		<script>
+			function closeIntro() {
+				const intro = document.getElementById('intro');
+				intro.style.height = intro.style.height == "auto" ? "50px" : "auto";
+				const toggle = document.getElementById('toggle');
+				toggle.innerHTML = toggle.innerHTML == "Show More" ? "Hide" : "Show More";
+			}
+			function startTour() {
+				document.getElementById('overlay').style.visibility='inherit';
+				document.getElementById('overlay').style.opacity='1';
+				document.getElementById('content').style.filter='blur(4px)';
+				document.getElementById('intro').style.filter='blur(4px)';
+				document.getElementById('download').style.filter='blur(4px)';
+			}
+			function endTour() {
+				document.getElementById('overlay').style.visibility='hidden';
+				document.getElementById('overlay').style.opacity='0';
+				document.getElementById('content').style.filter='inherit';
+				document.getElementById('intro').style.filter='inherit';
+				document.getElementById('download').style.filter='inherit';
+			}
+		</script>
+	</head>
+	<body>
+		<div id="overlay">
+			<div id="close">
+				<span onclick="endTour()" id="closeButton"><i class="fas fa-times"></i> Exit</span>
+			</div>
+			<div class="tourStop" id="tourStop1">
+				<h4>Responsive Design!<h4>
+				<h4>Made with CSS3 flexbox and optimized for desktop, tablet, and mobile. Try resizing your browser window!<h4>
+			</div>
+		</div>
+		<div id="intro" style="height: auto;">
+			<h1>Welcome to My Microsite!</h1>
+			<p>My résumé is on this page, but you're probably bored of reading those. You care about what I can DO.</p>
+			<p>I built this site from scratch; please let me give you <span id="theTour" onclick="startTour()">THE&nbsp;TOUR&nbsp;▶</span></p>
+			<!---------<span id="toggle" onclick="closeIntro()">HIDE</span>---------->
+		</div>
+		<div id="content">
+			<div class="column">
+				<section id="info">
+					<h3>Peter Liu</h3>
+					<h4 id="whatIDo">Web<span>|</span>UX<span>|</span>UI<span>|</span>Graphics</h4>
+					<h4 id="whoIAm">I love building digital experiences that look great and work smoothly. Let's get in touch!</h4>
+					<hr />
+					<h4>647-986-5086</h4>
+					<h4>Peter.TY.Liu@gmail.com</h4>
+					<a class="socialLink" href="https://www.facebook.com/peter.liu.583">Facebook</a>
+					<a class="socialLink" href="https://www.linkedin.com/in/peter-ty-liu/">LinkedIn</a>
+					<a class="socialLink" href="https://peterliu.myportfolio.com/">Portfolio</a>
+				</section>
+				<section id="experience" class="box">
+					<h5><span class='icon' id='experienceIcon'></span>Experience</h5>
+					<h4>Fairfax Financial, FairVentures Innovation Lab / <span class='company'>UX Designer</span></h4>
+					<time>SEPT - DEC 2017,  KITCHENER, ON</time>
+					<p>Ideated and designed mobile apps utilizing emerging technologies; created interactive high-fidelity prototypes using Figma, and user-tested with stakeholders; created microsite for internal hackathon; participated in several design sprints</p>
+					<h4>Clear Spider / <span class='company'>UI/UX Designer</span></h4>
+					<time>MAY - AUG 2017,  MISSISSAUGA, ON</time>
+					<p>Completed thorough usability assessment and UI/UX redesign of the company’s software platform, created multiple iterative interactive prototypes using Adobe XD and PHP on XAMPP</p>
+					<h4>TEledyne DALSA / <span class='company'>Web Communications Designer</span></h4>
+					<time>SEPT - DEC 2016,  WATERLOO, ON</time>
+					<p>Designed graphics and marketing material for trade show presentations; designed and created webpages for company’s redesigned website in collaboration with San Francisco unit</p>
+					<h4>City of Kingston / <span class='company'>GIS Intern</span></h4>
+					<time>JAN - APR 2016,  KINGSTON, ON</time>
+					<p>Designed city’s upcoming open data portal; created large-scale infographic campaign regarding open data initiative</p>
+				</section>	
+			</div>
+			<div class="column">
+				<section id="skills" class="box">
+					<h5><span class= 'icon' id='skillsIcon'></span>Skills</h5>
+					<p><span class="company">WEB: </span>Semantic HTML5, CSS3, SCSS, Javascript (Vanilla, jQuery, React.js), PHP, Bootstrap, Wordpress, responsive web design</p>
+					<p><span class="company">DESIGN: </span>Adobe suite including Photoshop, Illustrator, Premiere Pro; SketchUp</p>
+					<p><span class="company">UI: </span>Adobe XD, Figma, InVision, various wireframing tools </p>
+					<p><span class="company">UX: </span>Running and participating in design sprints, user testing, journey mapping</p>
+					<p><span class="company">LANGUAGE: </span>Fluent in English and Mandarin Chinese</p>
+				</section>
+				<section id="awards" class="box">
+					<h5><span class='icon' id='awardsIcon'></span>Awards and Prizes</h5>
+					<h4>Communitech Code/Design to Win / <span class='company'>1<sup>st</sup> Place, Design to Win</span></h4>
+					<time>JAN 2019, KITCHENER, ON</time>
+					<p>Competed in a UX design challenge against 25 other finalists, selected from several hundred competitors across Canada. Finished 1st overall with $5000 prize.</p>
+					<h4>Communitech Code/Design to Win / <span class='company'>2<sup>nd</sup> Place, Design to Win</span></h4>
+					<time>JAN 2018, KITCHENER, ON</time>
+					<p>Competed in a UX design challenge against 25 other finalists, selected from several hundred competitors across Canada. Finished 1st overall with $1000 prize.</p>
+					<h4>St. Paul's Green House / <span class='company'>Green House Fellowship</span></h4>
+					<time>MAR 2017, WATERLOO, ON</time>
+					<p>Competed in a social innovation challenge; awarded a St. Paul’s GreenHouse fellowship with $1000 in funding</p>
+				</section>
+				<section id="education" class="box">
+					<h5><span class='icon' id='educationIcon'></span>Education</h5>
+					<h4>University of Waterloo / <span class='company'>Honours Planning and Economics Co-op</span></h4>
+					<time>2013 - 2018,  WATERLOO, ON</time>
+					<p>Bachelors of Environmental Science, Honours Planning Co-op and Honours Economics</p>
+				</section>
+			</div>
+		</div>
+		<div id="download">
+			<p><a target="_blank" href="./files/PeterLiuresume2019.pdf">View</a> or <a target="_blank" href="./files/PeterLiuresume2019.pdf" download>download</a> résumé as PDF</p>
+		</div>
+	</body>
+</html>
