@@ -110,11 +110,7 @@ h5 {
 }
 time {
 	color: #777;
-}
-@media only screen and (max-width: 400px){
-  time {
 	font-size: 16px;
-  }
 }
 .column {
 	width: 50%;
@@ -196,7 +192,7 @@ section {
 .linkedin::before {
 	content: "LinkedIn";
 }
-@media only screen and (max-width: 400px){
+@media only screen and (max-width: 430px){
 	.facebook::before {
 		font-family: "Font Awesome 5 Brands";
 		font-weight: 400;
@@ -221,8 +217,12 @@ section {
 	position: absolute;
     right: 18px;
 	top: 18px;
-	color: #888;
+	color: #999;
 	font-size: 24px;
+	transition: color 0.08s ease-in;
+}
+.collapse-button:hover {
+	color: #777;
 }
 #awards-h5:after {
 	content: 'Awards and Prizes';
@@ -234,8 +234,6 @@ section {
 }
 /**********************************INTRO***********************************/
 #intro {
-	color: white;
-	background-color: #dbdbdb;
 	padding: 20px 40px;
 	border-radius: 5px;
 	margin: 20px;
@@ -269,7 +267,7 @@ h1 {
 	position: fixed;
 	width: 100%;
 	height: 100%;
-	background-color: rgba(255,255,255,0.7);
+	background-color: rgba(255,255,255,0.75);
 	z-index: 500;
 	top: 0px;
 	transition: visibility 1s, opacity 1s ease-in-out;
@@ -290,11 +288,21 @@ h1 {
 #closeButton:hover {
 	color: #555;
 }
-#tour-stop-1 {
+#arrowdiv {
+	width: 100%;
+	height: 180px;
 	background-image: url('../images/doublearrow.svg');
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center;
+}
+.show {
+	display: inherit;
+}
+.hidden {
+	display: none;
+}
+.tour-stop {
 	max-width: 1170px;
 	width: 95%;
 	height: 20vh;
@@ -302,6 +310,25 @@ h1 {
 	margin-right: auto;
 	text-align: center;
 	margin-top: 25vh;
+}
+#back-next {
+	width: 100%;
+	text-align: center;
+	position: absolute;
+	bottom: 10vh;
+	user-select: none;
+	font-size: 20px;
+}
+#back, #next {
+	cursor: pointer;
+}
+#count {
+	display: inline-block;
+	width: 45px;
+}
+.grey {
+	color: #999;
+	cursor: auto !important;
 }
 /**********************************Download***********************************/
 #download {
