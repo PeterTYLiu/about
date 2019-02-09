@@ -10,6 +10,7 @@
 			function startTour() {
 				document.getElementById('overlay').style.visibility='inherit';
 				document.getElementById('overlay').style.opacity='1';
+				document.getElementById('tour-stop-1').style.opacity='1';
 				document.getElementById('content').style.filter='blur(4px)';
 				document.getElementById('intro').style.filter='blur(4px)';
 				document.getElementById('download').style.filter='blur(4px)';
@@ -53,10 +54,16 @@
 				var nextStopNumber = parseInt(currentStop.id[currentStop.id.length -1], 10)+1;
 				var nextStop = document.getElementById("tour-stop-" + nextStopNumber)
 				if (currentStopNumber < 6) {
-					currentStop.classList.remove('show');
-					currentStop.classList.add('hidden');
-					nextStop.classList.add('show');
-					nextStop.classList.remove('hidden');
+					currentStop.style.opacity='0';
+					setTimeout(function(){
+						currentStop.classList.remove('show');
+						currentStop.classList.add('hidden');					
+						nextStop.classList.add('show');
+						nextStop.classList.remove('hidden');
+					}, 300);
+					setTimeout(function(){
+						nextStop.style.opacity='1';
+					}, 305);
 					document.getElementById('count').innerHTML=nextStopNumber+'/6';
 				} 
 				if (currentStopNumber == 5) {
@@ -72,10 +79,16 @@
 				var prevStopNumber = parseInt(currentStop.id[currentStop.id.length -1], 10)-1;
 				var prevStop = document.getElementById("tour-stop-" + prevStopNumber)
 				if (currentStopNumber > 1) {
-					currentStop.classList.remove('show');
-					currentStop.classList.add('hidden');
-					prevStop.classList.add('show');
-					prevStop.classList.remove('hidden');
+					currentStop.style.opacity='0';
+					setTimeout(function(){
+						currentStop.classList.remove('show');
+						currentStop.classList.add('hidden');
+						prevStop.classList.add('show');
+						prevStop.classList.remove('hidden');
+					}, 300);
+					setTimeout(function(){
+						prevStop.style.opacity='1';
+					}, 305);
 					document.getElementById('count').innerHTML=prevStopNumber+'/6';
 				} 
 				if (currentStopNumber == 2) {
@@ -129,9 +142,8 @@
 		</div>
 		<div id="intro" style="height: auto;">
 			<h1>Welcome to My Microsite!</h1>
-			<p>My résumé is on this page, but you're probably bored of reading those. You care about what I can DO.</p>
-			<p>I built this site from scratch; please let me give you </p>
-			<span id="theTour" onclick="startTour()">THE&nbsp;TOUR&nbsp;▶</span>
+			<p>Why read my résumé when I can show you my skills?<br />See how I made this site from scratch!</p>
+			<span id="theTour" onclick="startTour()">TAKE&nbsp;THE&nbsp;TOUR&nbsp;▶</span>
 		</div>
 		<div id="content">
 			<div class="column">
