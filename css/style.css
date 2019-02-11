@@ -247,7 +247,7 @@ section {
 	color: #444;
 	transition: filter 1s ease-in-out, height 0.5s ease-in-out;
 }
-#theTour {
+#take-the-tour-button {
 	color: #FFF;
 	background-image: linear-gradient(#1fdc10, #10c000);
 	padding: 9px 17px 4px;
@@ -255,7 +255,7 @@ section {
 	font-weight: bold;
 	font-size: 20px;
 }
-#theTour:hover {
+#take-the-tour-button:hover {
 	background-color: #1cc100;
 	cursor: pointer;
 }
@@ -314,10 +314,19 @@ section {
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
-	margin-top: 25vh;
+	margin-top: 14vh;
 	opacity: 0;
 	transition: opacity 0.3s linear;
 }
+.tour-stop h1 {
+	margin-bottom: 5px;
+	line-height: 1.4;
+}
+#tour-stop-1 img {
+	width: 200px;
+}
+/**********************************TOUR BUTTONS***********************************/
+
 #back-next {
 	width: 100%;
 	text-align: center;
@@ -332,9 +341,16 @@ section {
 }
 #back, #next {
 	cursor: pointer;
-	background-color: #dfdfdf;
 	width: 60px;
 	font-size: 20px;
+	background-color: #1282e5;
+	color: white;
+}
+#back:hover, #next:hover {
+	background-color: #0e71c9;
+}
+#back:active, #next:active {
+	background-color: #0d5ea5;
 }
 #count {
 	width: 60px;
@@ -342,9 +358,9 @@ section {
 	font-size: 24px;
 }
 .grey {
-	color: #999;
+	color: #ddd;
 	cursor: auto !important;
-	background-color: #dfdfdf;
+	background-color: #80a7c9 !important;
 }
 /**********************************Download***********************************/
 #download {
