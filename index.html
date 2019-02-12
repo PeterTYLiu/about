@@ -28,7 +28,11 @@
 								}
 							}, lines.length*300 + 700);
 						},
-				TSS_3:	function() {console.log('On three!');},
+				TSS_3:	function() {
+							setTimeout(function(){
+								document.getElementById('arrowdiv').style.backgroundSize = '100% 100%';
+							}, 500);
+						},
 				TSS_4:	function() {console.log('On four!');},
 				TSS_5:	function() {console.log('On five!');},
 				TSS_6:	function() {console.log('On six!');}
@@ -48,7 +52,9 @@
 								blues[i].style.color='#fff';
 							}
 						},
-				TSE_3:	function() {console.log('Left three!');},
+				TSE_3:	function() {
+							document.getElementById('arrowdiv').style.backgroundSize = '0% 100%';
+						},
 				TSE_4:	function() {console.log('Left four!');},
 				TSE_5:	function() {console.log('Left five!');},
 				TSE_6:	function() {console.log('Left six!');}
@@ -174,8 +180,8 @@
 			</div>
 			<div class="tour-stop hidden" id="tour-stop-3">
 				<h1>Responsive Design!</h1>
-				<p>Made with CSS3 flexbox and optimized for desktop, tablet, and mobile. Try resizing your browser window!</p>
 				<div id='arrowdiv'></div>
+				<p>Built with CSS3 flexbox and media queries, this site looks great on screens of any size. Try resizing your browser window!</p>
 			</div>
 			<div class="tour-stop hidden" id="tour-stop-4">
 				<h1>Under Construction!</h1>
