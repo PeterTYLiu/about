@@ -10,6 +10,9 @@ p {
 	margin-bottom: 25px;
 	font-size: 18px;
 }
+h1, h2, h3, h5, h6 {
+	font-family: 'Zilla Slab' ,serif;
+}
 #content {
 	background-color: #d15353;
 	max-width: 1120px;
@@ -74,19 +77,7 @@ p {
 #awardsIcon {
 	background-image: url('../images/awards.svg');
 }
-h3 {
-	font-size: 70px;
-	margin: 0px;
-	font-family: 'Zilla Slab' ,serif;
-	font-weight: 400;
-}
-@media only screen and (max-width: 859px){
-  h3 {
-	font-size: 58px;
-  }
-}
 h5 {
-	font-family: 'Zilla Slab' ,serif;
 	margin: 0px;
 	margin-bottom: 35px;
 	font-size: 28px;
@@ -126,36 +117,125 @@ time {
 	min-width: 0px;
   }
 }
-#info h4 {
-	font-size: 20px;
+/**********************************Info Section***********************************/
+#info h1 {
+	font-size: 70px;
+	margin: 0px;
+	font-weight: 400;
+}
+#info p {
+	font-size: 24px;
 	margin-top: 5px;
-	margin-bottom: 5px;
+	margin-bottom: 14px;
 	font-weight: 100;
 	line-height: 1.2;
 }
-#info #whatIDo {
+#info h2 {
+	margin-top: 0px;
 	margin-bottom: 14px;
-	font-size: 25px;
-	font-weight: 700;
-}
-@media only screen and (max-width: 400px){
-  #info #whatIDo {
-	font-size: 20px;
-  }
-}
-#info #whoIAm {
-	margin-bottom: 14px;
+	font-size: 26px;
+	font-weight: 500;
 }
 #info span {
 	padding-right: 14px;
 	padding-left: 14px;
 	font-weight: 100;
 }
-hr {
+#info hr {
 	background-color: #FFF;
-	margin-bottom: 19px;
+	margin-bottom: 14px;
 	height: 1px;
 	border: none;
+}
+#info a {
+	color: white;
+	text-decoration: none;
+	font-size: 20px;
+	line-height: 1;
+}
+#info .social-link {
+	font-size: 16px;
+	background-color: #8e3030;
+	padding: 7px 25px 4px;
+	margin: 7px 15px 0px 0px;
+	border-radius: 5px;
+	color: #FFF;
+	text-decoration: none;
+	display: inline-block;
+	display: inline-block;
+	user-select: none;
+	line-height: inherit;
+}
+.social-link-last {
+	margin-right: 0px !important;
+}
+.facebook::before {
+	content: "Facebook";
+}
+.linkedin::before {
+	content: "LinkedIn";
+}
+@media only screen and (max-width: 480px){
+	#info h2 {
+		font-size: 20px;
+	}
+	#info p {
+		font-size: 18px;
+		margin-bottom: 8px;
+	}
+	#info a {
+		font-size: 18px;
+	}
+	.facebook::before {
+		font-family: "Font Awesome 5 Brands";
+		font-weight: 400;
+		content: "\f082";
+	}
+	.linkedin::before {
+		font-family: "Font Awesome 5 Brands";
+		font-weight: 400;
+		content: "\f08c";
+	}
+	#info .social-link {
+		font-size: 18px;
+		padding: 6px 20px 3px;
+	}
+	#info hr {
+		margin-bottom: 9px;
+	}
+}
+@media only screen and (min-width: 860px) and (max-width: 950px){
+	.facebook::before {
+		font-family: "Font Awesome 5 Brands";
+		font-weight: 400;
+		content: "\f082";
+	}
+	.linkedin::before {
+		font-family: "Font Awesome 5 Brands";
+		font-weight: 400;
+		content: "\f08c";
+	}
+}
+@media only screen and (max-width: 859px){
+	#info h1 {
+		font-size: 56px;
+	}
+	#info .social-link {
+		padding: 6px 20px 3px;
+		margin: 7px 9px 0px 0px;
+	}
+}
+/**********************************BOXES***********************************/
+.collapse-button {
+	position: absolute;
+    right: 18px;
+	top: 18px;
+	color: #999;
+	font-size: 24px;
+	transition: color 0.08s ease-in;
+}
+.collapse-button:hover {
+	color: #777;
 }
 section {
 	width: auto;
@@ -172,58 +252,6 @@ section {
 .company {
 	color: #f2511b;
 	font-weight: bold;
-}
-.social-link {
-	background-color: #8e3030;
-	padding: 7px 25px 4px;
-	margin: 7px 15px 0px 0px;
-	border-radius: 5px;
-	color: #FFF;
-	text-decoration: none;
-	display: inline-block;
-	display: inline-block;
-	user-select: none;
-}
-.social-link-last {
-	margin-right: 0px !important;
-}
-.facebook::before {
-	content: "Facebook";
-}
-.linkedin::before {
-	content: "LinkedIn";
-}
-@media only screen and (max-width: 430px){
-	.facebook::before {
-		font-family: "Font Awesome 5 Brands";
-		font-weight: 400;
-		content: "\f082";
-	}
-	.linkedin::before {
-		font-family: "Font Awesome 5 Brands";
-		font-weight: 400;
-		content: "\f08c";
-	}
-	.social-link {
-		font-size: 18px;
-	}
-}
-@media only screen and (max-width: 859px){
-  .social-link {
-	padding: 6px 20px 3px;
-	margin: 7px 9px 0px 0px;
-  }
-}
-.collapse-button {
-	position: absolute;
-    right: 18px;
-	top: 18px;
-	color: #999;
-	font-size: 24px;
-	transition: color 0.08s ease-in;
-}
-.collapse-button:hover {
-	color: #777;
 }
 #awards-h5:after {
 	content: 'Awards and Prizes';
@@ -254,18 +282,22 @@ section {
 	border-radius: 4px;
 	font-weight: bold;
 	font-size: 20px;
+	user-select: none;
 }
 #take-the-tour-button:hover {
 	background-color: #1cc100;
 	cursor: pointer;
 }
-#intro h1 {
-	font-family: 'Zilla Slab', serif;
-}
 #intro p {
 	font-size: 20px;
 }
-/**********************************THE TOUR***********************************/
+/**************************************        ******************************************/
+/**************************************        ******************************************/
+/**************************************        ******************************************/
+/**************************************THE TOUR******************************************/
+/**************************************        ******************************************/
+/**************************************        ******************************************/
+/**************************************        ******************************************/
 #overlay {
 	visibility: hidden;
 	position: fixed;
@@ -319,12 +351,24 @@ section {
 	transition: opacity 0.3s linear;
 }
 .tour-stop h1 {
-	margin-bottom: 5px;
+	margin-bottom: 30px;
 	line-height: 1.4;
+	font-size: 40px;
 }
 #tour-stop-1 img {
 	width: 200px;
 }
+.tour-stop p {
+	font-size: 22px;
+	max-width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.tour-stop h1 .subtitle {
+	font-size: 24px;
+	display: inline-block;
+	transform: translate(0px, -10px);
+	}
 @media only screen and (max-width: 500px){
 	#tour-stop-1 img {
 		width: 140px;
@@ -335,9 +379,43 @@ section {
 	}
 	.tour-stop h1 {
 		font-size: 24px;
+		margin-bottom: 15px;
 	}
-	.tour-stop h5 {
-		font-size: 20px;
+	.tour-stop h1 .subtitle {
+		font-size: 18px;
+		transform: translate(0px, 0px);
+	}	
+	.tour-stop p {
+		font-size: 18px;
+	}
+}
+/**********************************CODE***********************************/
+.code {
+	text-align: left;
+	background-color: #222;
+	font-family: monospace;
+	color: white;
+	padding: 20px;
+	font-size: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 500px;
+	line-height: 1.5;
+	margin-bottom: 40px;
+	overflow: hidden;
+}
+.tag {
+	color: #fff;
+	transition: color 0.2s ease-in;
+}
+.code-line {
+	display: inline-block;
+	opacity: 0;
+	transition: opacity 0.35s linear;
+}
+@media only screen and (max-width: 600px){
+	.code {
+		font-size: 15px;
 	}
 }
 /**********************************TOUR BUTTONS***********************************/
