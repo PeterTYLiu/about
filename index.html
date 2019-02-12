@@ -26,12 +26,14 @@
 								for (i = 0; i < blues.length; i++) {
 									blues[i].style.color='#00e8ff';
 								}
+								document.getElementById('class').style.color='#ecf400';
+								document.getElementById('green').style.color='#21ff00';
 							}, lines.length*300 + 700);
 						},
 				TSS_3:	function() {
 							setTimeout(function(){
 								document.getElementById('arrowdiv').style.backgroundSize = '100% 100%';
-							}, 500);
+							}, 350);
 						},
 				TSS_4:	function() {console.log('On four!');},
 				TSS_5:	function() {console.log('On five!');},
@@ -51,6 +53,8 @@
 							for (i = 0; i < blues.length; i++) {
 								blues[i].style.color='#fff';
 							}
+							document.getElementById('class').style.color='#fff';
+							document.getElementById('green').style.color='#fff';
 						},
 				TSE_3:	function() {
 							document.getElementById('arrowdiv').style.backgroundSize = '0% 100%';
@@ -170,7 +174,7 @@
 			<div class="tour-stop hidden" id="tour-stop-2">
 				<h1>Built with Semantic HTML5</h1>
 				<div class='code'>
-					<span class='code-line'><span class='tag'>&lt;section&gt;</span></span><br />
+					<span class='code-line'><span class='tag'>&lt;section <span id='class'>class=</span><span id='green'>'position'</span>&gt;</span></span><br />
 					<span class='code-line'>&emsp;&emsp;&emsp;<span class='tag'>&lt;h3&gt;</span>Designer at Company<span class='tag'>&lt;/h3&gt;</span></span><br />
 					<span class='code-line'>&emsp;&emsp;&emsp;<span class='tag'>&lt;time&gt;</span>DEC 2018<span class='tag'>&lt;/time&gt;</span></span><br />
 					<span class='code-line'>&emsp;&emsp;&emsp;<span class='tag'>&lt;p&gt;</span>Did a lot of great work!<span class='tag'>&lt;/p&gt;</span></span><br />
@@ -186,17 +190,17 @@
 			<div class="tour-stop hidden" id="tour-stop-4">
 				<h1>Under Construction!</h1>
 				<h4>44444 444 4444444 444444444444 4444</h4>
-				<h4>orfur ofur ofur ofrofuro furofur ofurfouf oruf rofroufr ofurofuo</h4>
+				<h4>Thoughtful design</h4>
 			</div>
 			<div class="tour-stop hidden" id="tour-stop-5">
 				<h1>Under Construction!</h1>
 				<h4>5555555 5555555 555555555555555 55555</h4>
-				<h4>ievfeifv eivfevfe ifvefivefive fieveivf eifveif veifveiv</h4>
+				<h4>Neat animations</h4>
 			</div>
 			<div class="tour-stop hidden" id="tour-stop-6">
 				<h1>Under Construction!</h1>
 				<h4>66666 666666666 666666 666666666 666</h4>
-				<h4>sixsixi sxisxisxisxisx ixsi</h4>
+				<h4>thanks for visiting!</h4>
 			</div>
 			<div id='back-next'>
 				<span id='back' onclick='back()' class='grey'> &lt; back </span><span id='count'>1/6</span><span id='next' onclick='next()'> next > </span>
