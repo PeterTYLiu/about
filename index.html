@@ -3,14 +3,61 @@
 	<head>
 		<title>Peter's Résumé Microsite</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link href="https://fonts.googleapis.com/css?family=Zilla+Slab|Hind+Guntur" rel="stylesheet">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Zilla+Slab|Hind+Guntur" >
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-		<link href="css/style.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/style.css" >
 		<script>
+			const tourStopStart = {
+				TSS_1:	function() {console.log('On one!');},
+				TSS_2:	function() {
+							let lines = document.getElementsByClassName('code-line');
+							for (i = 0; i < lines.length; i++) {
+								let line = lines[i];
+								let time = 300*i;
+								setTimeout(function(){
+									line.style.opacity='1';
+									line.classList.add('animated');
+									line.classList.add('slideInLeft');
+								}, time);
+							}
+							setTimeout(function(){
+								let blues = document.getElementsByClassName('tag');
+								for (i = 0; i < blues.length; i++) {
+									blues[i].style.color='#00e8ff';
+								}
+							}, lines.length*300 + 700);
+						},
+				TSS_3:	function() {console.log('On three!');},
+				TSS_4:	function() {console.log('On four!');},
+				TSS_5:	function() {console.log('On five!');},
+				TSS_6:	function() {console.log('On six!');}
+			};
+			const tourStopEnd = {
+				TSE_1:	function() {console.log('Left one!');},
+				TSE_2:	function() {
+							let lines = document.getElementsByClassName('code-line');
+							for (i = 0; i < lines.length; i++) {
+								let line = lines[i];
+								line.style.opacity='0';
+								line.classList.remove('animated');
+								line.classList.remove('slideInLeft');
+							}
+							let blues = document.getElementsByClassName('tag');
+							for (i = 0; i < blues.length; i++) {
+								blues[i].style.color='#fff';
+							}
+						},
+				TSE_3:	function() {console.log('Left three!');},
+				TSE_4:	function() {console.log('Left four!');},
+				TSE_5:	function() {console.log('Left five!');},
+				TSE_6:	function() {console.log('Left six!');}
+			};
 			function startTour() {
-				document.getElementById('overlay').style.visibility='inherit';
+				let tourStop1 = document.getElementById('tour-stop-1');
+				document.getElementById('overlay').style.visibility='inherit';				
 				document.getElementById('overlay').style.opacity='1';
-				document.getElementById('tour-stop-1').style.opacity='1';
+				tourStop1.style.opacity='1';
 				document.getElementById('content').style.filter='blur(4px)';
 				document.getElementById('intro').style.filter='blur(4px)';
 				document.getElementById('download').style.filter='blur(4px)';
@@ -19,8 +66,8 @@
 				if (currentStopNumber != 1) {
 					currentStop.classList.remove('show');
 					currentStop.classList.add('hidden');
-					document.getElementById('tour-stop-1').classList.remove('hidden');
-					document.getElementById('tour-stop-1').classList.add('show');
+					tourStop1.classList.remove('hidden');
+					tourStop1.classList.add('show');
 					document.getElementById('count').innerHTML='1/6';
 				}
 			}
@@ -64,6 +111,8 @@
 					setTimeout(function(){
 						nextStop.style.opacity='1';
 					}, 320);
+					setTimeout(tourStopStart['TSS_' + nextStopNumber], 720);
+					tourStopEnd['TSE_' + currentStopNumber]();
 					document.getElementById('count').innerHTML=nextStopNumber+'/6';
 				} 
 				if (currentStopNumber == 5) {
@@ -89,6 +138,8 @@
 					setTimeout(function(){
 						prevStop.style.opacity='1';
 					}, 320);
+					setTimeout(tourStopStart['TSS_' + prevStopNumber], 720);
+					tourStopEnd['TSE_' + currentStopNumber]();
 					document.getElementById('count').innerHTML=prevStopNumber+'/6';
 				} 
 				if (currentStopNumber == 2) {
@@ -107,20 +158,24 @@
 			</div>
 			<div class="tour-stop show" id="tour-stop-1">
 				<img src='images/head-circle.png' alt='A photo of me!' />
-				<h1>I'm Peter, and I make cool stuff</h1>
-				<h5>(like this website!)</h5>
-				<p>I'll use this site to show you how I build great digital experiences.</p>
+				<h1>I'm Peter, and I make cool&nbsp;stuff<br /><span class='subtitle'>(like this website!)</span></h1>
+				<p>I'll use this site as an example of how I build great digital experiences.</p>
 			</div>
 			<div class="tour-stop hidden" id="tour-stop-2">
+				<h1>Built with Semantic HTML5</h1>
+				<div class='code'>
+					<span class='code-line'><span class='tag'>&lt;section&gt;</span></span><br />
+					<span class='code-line'>&emsp;&emsp;&emsp;<span class='tag'>&lt;h3&gt;</span>Designer at Company<span class='tag'>&lt;/h3&gt;</span></span><br />
+					<span class='code-line'>&emsp;&emsp;&emsp;<span class='tag'>&lt;time&gt;</span>DEC 2018<span class='tag'>&lt;/time&gt;</span></span><br />
+					<span class='code-line'>&emsp;&emsp;&emsp;<span class='tag'>&lt;p&gt;</span>Did a lot of great work!<span class='tag'>&lt;/p&gt;</span></span><br />
+					<span class='code-line'><span class='tag'>&lt;/section&gt;</span></span>
+				</div>
+				<p>This site is written in modern semantic HTML5, using all the appropriate semantic tags, making it machine-readable and accessible. No <code>&lt;table&gt;</code> shenanigans here!</p>
+			</div>
+			<div class="tour-stop hidden" id="tour-stop-3">
 				<h1>Responsive Design!</h1>
 				<p>Made with CSS3 flexbox and optimized for desktop, tablet, and mobile. Try resizing your browser window!</p>
 				<div id='arrowdiv'></div>
-			</div>
-			<div class="tour-stop hidden" id="tour-stop-3">
-				<h1>Under Construction!</h1>
-				<h1>Semantic HTML!</h1>
-				<h4>333 3333333 333 3333333 333</h4>
-				<h4>erthertheteh rtehreth rethretrht ehrterhter hethrethr etrhetrheth</h4>
 			</div>
 			<div class="tour-stop hidden" id="tour-stop-4">
 				<h1>Under Construction!</h1>
@@ -149,12 +204,12 @@
 		<div id="content">
 			<div class="column">
 				<section id="info">
-					<h3>Peter Liu</h3>
-					<h4 id="whatIDo">Web<span>|</span>UX<span>|</span>UI<span>|</span>Graphics</h4>
-					<h4 id="whoIAm">I love building digital experiences that look great and work smoothly. Let's get in touch!</h4>
+					<h1>Peter Liu</h1>
+					<h2>Web<span>|</span>UX<span>|</span>UI<span>|</span>Graphics</h2>
+					<p>I love building digital experiences that look great and work smoothly. Let's get in touch!</p>
 					<hr />
-					<h4>647-986-5086</h4>
-					<h4>Peter.TY.Liu@gmail.com</h4>
+					<a href="tel:647-986-5086">647-986-5086</a><br />
+					<a href="mailto:Peter.TY.Liu@gmail.com">Peter.TY.Liu@gmail.com</a><br />
 					<a class="social-link facebook" href="https://www.facebook.com/peter.liu.583"></a>
 					<a class="social-link linkedin" href="https://www.linkedin.com/in/peter-ty-liu/"></a>
 					<a class="social-link social-link-last" href="https://peterliu.myportfolio.com/">Portfolio</a>
@@ -177,7 +232,7 @@
 			</div>
 			<div class="column">
 				<section id="skills" class="box">
-					<h5><span class= 'icon' id='skillsIcon'></span>Skills</h5><i class="collapse-button fas fa-minus-circle" onclick="collapseBox(event)"></i>
+					<h5><span class='icon' id='skillsIcon'></span>Skills</h5><i class="collapse-button fas fa-minus-circle" onclick="collapseBox(event)"></i>
 					<p><span class="company">WEB: </span>Semantic HTML5, CSS3, SCSS, Javascript (Vanilla, jQuery, React.js), PHP, Bootstrap, Wordpress, responsive web design</p>
 					<p><span class="company">DESIGN: </span>Adobe suite including Photoshop, Illustrator, Premiere Pro; SketchUp</p>
 					<p><span class="company">UI: </span>Adobe XD, Figma, InVision, various wireframing tools </p>
