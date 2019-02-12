@@ -422,8 +422,7 @@ section {
 	margin-bottom: 40px;
 	overflow: hidden;
 }
-.tag {
-	color: #fff;
+.code span {
 	transition: color 0.2s ease-in;
 }
 .code-line {
