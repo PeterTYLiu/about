@@ -473,7 +473,7 @@ section {
 	cursor: auto !important;
 	background-color: #80a7c9 !important;
 }
-@media only screen and (max-width: 500px){
+@media only screen and (max-width: 1024px){
 	#back-next {
 		bottom: 5vh;
 	}
