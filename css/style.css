@@ -12,7 +12,7 @@ p {
 }
 h1, h2, h3, h5, h6 {
 	font-family: 'Zilla Slab', serif;
-	font-weight: normal;
+	font-weight: medium;
 }
 #content {
 	background-color: #d15353;
@@ -332,8 +332,8 @@ section {
 	left: 2vw;
 	width: 96vw;
 	height: 15vw;
-	max-height: 180px;
-	background-image: url('../images/doublearrow.svg');
+	max-height: 150px;
+	background-image: url('../images/doublearrow.png');
 	background-size: 0% 100%;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -432,7 +432,7 @@ section {
 	opacity: 0;
 	transition: opacity 0.35s linear;
 }
-@media only screen and (max-width: 600px), screen and (max-height: 600px){
+@media only screen and (max-width: 700px), screen and (max-height: 700px){
 	.code {
 		font-size: 14px;
 		padding: 11px;
