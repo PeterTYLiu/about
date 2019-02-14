@@ -92,24 +92,15 @@
 			function collapseBox(event) {
 				let button = event.target;
 				let box = button.parentElement;
-				if (button.classList.contains('fa-minus-circle')) {
-					button.classList.remove('fa-minus-circle');
-					button.classList.add('fa-plus-circle');
-				} else {
-					button.classList.add('fa-minus-circle');
-					button.classList.remove('fa-plus-circle');
-				}
-				let collapsedHeight = '60px'
-				if (box.style.height==collapsedHeight) {
-					box.style.height='auto';
-				} else {
-					box.style.height=collapsedHeight;
-				}
+				button.classList.toggle('fa-minus-circle');
+				button.classList.toggle('fa-plus-circle');
+				let collapsedHeight = '60px';
+				box.style.height = (box.style.height==collapsedHeight) ? 'auto' : collapsedHeight;
 			}
 			function next() {
 				var currentStop = document.getElementsByClassName('tour-stop show')[0];			
 				var currentStopNumber = parseInt(currentStop.id[currentStop.id.length -1], 10);
-				var nextStopNumber = parseInt(currentStop.id[currentStop.id.length -1], 10)+1;
+				var nextStopNumber = currentStopNumber+1;
 				var nextStop = document.getElementById("tour-stop-" + nextStopNumber)
 				if (currentStopNumber < 6) {
 					currentStop.style.opacity='0';
@@ -136,7 +127,7 @@
 			function back() {
 				var currentStop = document.getElementsByClassName('tour-stop show')[0];			
 				var currentStopNumber = parseInt(currentStop.id[currentStop.id.length -1], 10);
-				var prevStopNumber = parseInt(currentStop.id[currentStop.id.length -1], 10)-1;
+				var prevStopNumber = currentStopNumber-1;
 				var prevStop = document.getElementById("tour-stop-" + prevStopNumber)
 				if (currentStopNumber > 1) {
 					currentStop.style.opacity='0';
@@ -186,12 +177,29 @@
 			<div class="tour-stop hidden" id="tour-stop-3">
 				<h1>Responsive Design!</h1>
 				<div id='arrowdiv'></div>
-				<p>Built with CSS3 flexbox and media queries, this site looks great on screens of any size. Try resizing your browser window!</p>
+				<p>Built with CSS3 flexbox and media queries, this site looks great on screens of any size. Try resizing your browser window or switching to a different device!</p>
 			</div>
 			<div class="tour-stop hidden" id="tour-stop-4">
-				<h1>Under Construction!</h1>
-				<h4>44444 444 4444444 444444444444 4444</h4>
-				<h4>Thoughtful design</h4>
+				<h1>Optimized for Any Device!</h1>
+				<div id='responsive-animation'>
+					<h1 id='device-type'></h1>
+					<div id='responsive-animation-inner'>
+						<div class='responsive-animation-section' id='responsive-animation-info'>
+							<h2>Peter Liu</h2>
+							<p>▮▮ ▮▮▮ ▮ ▮▮▮▮ ▮ ▮▮ ▮▮▮ ▮</p>
+							<hr />
+							<a id='example-button-fb' href="https://www.facebook.com/peter.liu.583" target="_blank"></a>
+							<a id='example-button-li' href="https://www.linkedin.com/in/peter-ty-liu/" target="_blank"></a>
+						</div>
+						<div class='responsive-animation-section' id='responsive-animation-box'>
+							<h3>▮▮ ▮▮▮</h3>
+							<p>▮▮▮▮ ▮▮ ▮▮▮ ▮ ▮▮▮ ▮▮</p>
+							<p>▮▮ ▮▮▮ ▮▮▮ ▮▮▮ ▮ ▮▮ ▮▮▮ ▮▮ ▮</p>
+						</div>
+					</div>
+				</div>
+				<p>Responsive isn't good enough; I optimized this site for every device size - from 27-inch desktops to 4-inch phones - with thoughtful design that fits the use case.</p>
+				<p>"Mobile first" is <i>so</i> 2017.</p>
 			</div>
 			<div class="tour-stop hidden" id="tour-stop-5">
 				<h1>Under Construction!</h1>
@@ -202,6 +210,7 @@
 				<h1>Under Construction!</h1>
 				<h4>66666 666666666 666666 666666666 666</h4>
 				<h4>thanks for visiting!</h4>
+				<button onclick='endTour(); this.innerHTML=("Bye!");'>Exit tour</button>
 			</div>
 			<div id='back-next'>
 				<span id='back' onclick='back()' class='grey'> &lt; back </span><span id='count'>1/6</span><span id='next' onclick='next()'> next > </span>
@@ -221,12 +230,12 @@
 					<hr />
 					<a href="tel:647-986-5086">647-986-5086</a><br />
 					<a href="mailto:Peter.TY.Liu@gmail.com">Peter.TY.Liu@gmail.com</a><br />
-					<a class="social-link facebook" href="https://www.facebook.com/peter.liu.583"></a>
-					<a class="social-link linkedin" href="https://www.linkedin.com/in/peter-ty-liu/"></a>
-					<a class="social-link social-link-last" href="https://peterliu.myportfolio.com/">Portfolio</a>
+					<a class="social-link facebook" href="https://www.facebook.com/peter.liu.583" target="_blank"></a>
+					<a class="social-link linkedin" href="https://www.linkedin.com/in/peter-ty-liu/" target="_blank"></a>
+					<a class="social-link social-link-last" href="https://peterliu.myportfolio.com/" target="_blank">Portfolio</a>
 				</section>
 				<section id="experience" class="box">
-					<h5><span class='icon' id='experienceIcon'></span>Experience</h5><i class="collapse-button fas fa-minus-circle" onclick="collapseBox(event)"></i>
+					<h3><span class='icon' id='experienceIcon'></span>Experience</h3><i class="collapse-button fas fa-minus-circle" onclick="collapseBox(event)"></i>
 					<h4>Fairfax Financial, FairVentures Innovation Lab / <span class='company'>UX Designer</span></h4>
 					<time>SEPT - DEC 2017,  KITCHENER, ON</time>
 					<p>Ideated and designed mobile apps utilizing emerging technologies; created interactive high-fidelity prototypes using Figma, and user-tested with stakeholders; created microsite for internal hackathon; participated in several design sprints</p>
@@ -243,7 +252,7 @@
 			</div>
 			<div class="column">
 				<section id="skills" class="box">
-					<h5><span class='icon' id='skillsIcon'></span>Skills</h5><i class="collapse-button fas fa-minus-circle" onclick="collapseBox(event)"></i>
+					<h3><span class='icon' id='skillsIcon'></span>Skills</h3><i class="collapse-button fas fa-minus-circle" onclick="collapseBox(event)"></i>
 					<p><span class="company">WEB: </span>Semantic HTML5, CSS3, SCSS, Javascript (Vanilla, jQuery, React.js), PHP, Bootstrap, Wordpress, responsive web design</p>
 					<p><span class="company">DESIGN: </span>Adobe suite including Photoshop, Illustrator, Premiere Pro; SketchUp</p>
 					<p><span class="company">UI: </span>Adobe XD, Figma, InVision, various wireframing tools </p>
@@ -251,7 +260,7 @@
 					<p><span class="company">LANGUAGE: </span>Fluent in English and Mandarin Chinese</p>
 				</section>
 				<section id="awards" class="box">
-					<h5 id="awards-h5"><span class='icon' id='awardsIcon'></span></h5><i class="collapse-button fas fa-minus-circle" onclick="collapseBox(event)"></i>
+					<h3 id="awards-h3"><span class='icon' id='awardsIcon'></span></h3><i class="collapse-button fas fa-minus-circle" onclick="collapseBox(event)"></i>
 					<h4>Communitech Code/Design to Win / <span class='company'>1<sup>st</sup>&nbsp;Place, Design to Win</span></h4>
 					<time>JAN 2019, KITCHENER, ON</time>
 					<p>Competed in a UX design challenge against 25 other finalists, selected from several hundred competitors across Canada. Finished 1st overall with $5000 prize.</p>
@@ -263,7 +272,7 @@
 					<p>Competed in a social innovation challenge; awarded a St. Paul’s GreenHouse fellowship with $1000 in funding</p>
 				</section>
 				<section id="education" class="box">
-					<h5><span class='icon' id='educationIcon'></span>Education</h5><i class="collapse-button fas fa-minus-circle" onclick="collapseBox(event)"></i>
+					<h3><span class='icon' id='educationIcon'></span>Education</h3><i class="collapse-button fas fa-minus-circle" onclick="collapseBox(event)"></i>
 					<h4>University of Waterloo, School of Planning / <span class='company'>Honours Planning and Economics Co-op</span></h4>
 					<time>2013 - 2018,  WATERLOO, ON</time>
 					<p>Bachelors of Environmental Science, Honours Planning Co-op and Honours Economics</p>
