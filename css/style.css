@@ -12,8 +12,47 @@ p {
 }
 h1, h2, h3, h5, h6 {
 	font-family: 'Zilla Slab', serif;
-	font-weight: medium;
+	font-weight: bold;
 }
+/**************************************     ******************************************/
+/**************************************     ******************************************/
+/**************************************     ******************************************/
+/**************************************INTRO******************************************/
+/**************************************     ******************************************/
+/**************************************     ******************************************/
+/**************************************     ******************************************/
+#intro {
+	padding: 20px 0px;
+	max-width: 550px;
+	width: 85%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	color: #444;
+}
+#take-the-tour-button {
+	color: #FFF;
+	background-image: linear-gradient(#1fdc10, #10c000);
+	padding: 9px 17px 4px;
+	border-radius: 4px;
+	font-weight: bold;
+	font-size: 20px;
+	user-select: none;
+	cursor: pointer;
+}
+#take-the-tour-button:hover {
+	background-image: linear-gradient(#1dd510, #0fb300);
+}
+#intro p {
+	font-size: 20px;
+}
+/**************************************       ******************************************/
+/**************************************       ******************************************/
+/**************************************       ******************************************/
+/**************************************CONTENT******************************************/
+/**************************************       ******************************************/
+/**************************************       ******************************************/
+/**************************************       ******************************************/
 #content {
 	background-color: #d15353;
 	max-width: 1120px;
@@ -55,60 +94,17 @@ h1, h2, h3, h5, h6 {
 	width: 95%;
   }
 }
-.icon {
-	width: 32px;
-	height: 32px;
-	display: inline-block;
-	background-size: 65%;
-	background-repeat: no-repeat;
-	background-position: center;
-	transform: translate(0px, 12px);
-	margin-right: 14px;
-	padding: 6px;
-	border: 1.3px solid #444;
-	border-radius: 50%;
-}
-#educationIcon {
-	background-image: url('../images/education.svg');
-}
-#experienceIcon {
-	background-image: url('../images/experience.svg');
-}
-#skillsIcon {
-	background-image: url('../images/skills.svg');
-}
-#awardsIcon {
-	background-image: url('../images/awards.svg');
-}
-h5 {
-	margin: 0px;
-	margin-bottom: 35px;
-	font-size: 28px;
-}
-.box {
-	background-color: #FFF;
-	padding: 18px 30px 25px;
-	color: #444;
-	font-size: 18px;
-	position: relative;
-	overflow: hidden;
-}
-@media only screen and (max-width: 859px){
-  #experience {
-	margin-bottom: 0px;
-  }
-}
-.box h4 {
+section {
+	margin-left: 2%;
+	margin-right: 2%;
+	margin-top: 15px;
 	margin-bottom: 10px;
-	line-height: 1.4;
-}
-time {
-	color: #777;
-	font-size: 16px;
+	border-radius: 15px;
+	padding: 20px;
+	padding-top: 0px;
 }
 .column {
 	width: 50%;
-	min-width: 360px;
 }
 @media only screen and (max-width: 859px){
   .column {
@@ -121,28 +117,31 @@ time {
   }
 }
 /**********************************Info Section***********************************/
+#info, #info a {
+	color: #FFF;
+}
 #info h1 {
 	font-size: 70px;
 	margin: 0px;
 	font-weight: 400;
 }
-#info p {
-	font-size: 24px;
-	margin-top: 5px;
-	margin-bottom: 14px;
-	font-weight: 100;
-	line-height: 1.2;
-}
 #info h2 {
 	margin-top: 0px;
 	margin-bottom: 14px;
 	font-size: 26px;
-	font-weight: 500;
+	font-weight: semi-bold;
 }
 #info span {
 	padding-right: 14px;
 	padding-left: 14px;
 	font-weight: 100;
+}
+#info p {
+	font-size: 20px;
+	margin-top: 5px;
+	margin-bottom: 14px;
+	font-weight: 100;
+	line-height: 1.2;
 }
 #info hr {
 	background-color: #FFF;
@@ -151,7 +150,6 @@ time {
 	border: none;
 }
 #info a {
-	color: white;
 	text-decoration: none;
 	font-size: 20px;
 	line-height: 1;
@@ -162,12 +160,13 @@ time {
 	padding: 7px 25px 4px;
 	margin: 7px 15px 0px 0px;
 	border-radius: 5px;
-	color: #FFF;
 	text-decoration: none;
-	display: inline-block;
 	display: inline-block;
 	user-select: none;
 	line-height: inherit;
+}
+#info .social-link:hover {
+	background-color: #772828;
 }
 .social-link-last {
 	margin-right: 0px !important;
@@ -240,59 +239,65 @@ time {
 .collapse-button:hover {
 	color: #777;
 }
-section {
-	width: auto;
-	display: block;
-	margin-left: 2%;
-	margin-right: 2%;
-	margin-top: 15px;
-	margin-bottom: 10px;
-	border-radius: 15px;
-	padding: 20px;
-	padding-top: 0px;
-	color: #FFF;
-}
 .company {
 	color: #f2511b;
 	font-weight: bold;
 }
-#awards-h5:after {
+#awards-h3:after {
 	content: 'Awards and Prizes';
 }
 @media only screen and (max-width: 500px){
-  #awards-h5:after {
+  #awards-h3:after {
 	content: 'Awards';
 	}
 }
-/**********************************INTRO***********************************/
-#intro {
-	padding: 20px 0px;
-	border-radius: 5px;
-	overflow: hidden;
-	transition: height 0.2s ease-out;
-	max-width: 550px;
-	width: 85%;
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
+.icon {
+	width: 32px;
+	height: 32px;
+	display: inline-block;
+	background: center / 65% no-repeat;
+	transform: translate(0px, 12px);
+	margin-right: 14px;
+	padding: 6px;
+	border: 1.3px solid #444;
+	border-radius: 50%;
+}
+#educationIcon {
+	background-image: url('../images/education.svg');
+}
+#experienceIcon {
+	background-image: url('../images/experience.svg');
+}
+#skillsIcon {
+	background-image: url('../images/skills.svg');
+}
+#awardsIcon {
+	background-image: url('../images/awards.svg');
+}
+.box h3 {
+	margin: 0px 0px 35px 0px;
+	font-size: 28px;
+}
+.box {
+	background-color: #FFF;
+	padding: 18px 30px 25px;
 	color: #444;
-	transition: filter 1s ease-in-out, height 0.5s ease-in-out;
+	position: relative;
+	overflow: hidden;
 }
-#take-the-tour-button {
-	color: #FFF;
-	background-image: linear-gradient(#1fdc10, #10c000);
-	padding: 9px 17px 4px;
-	border-radius: 4px;
-	font-weight: bold;
-	font-size: 20px;
-	user-select: none;
+@media only screen and (max-width: 859px){
+  #experience {
+	margin-bottom: 0px;
+  }
 }
-#take-the-tour-button:hover {
-	background-color: #1cc100;
-	cursor: pointer;
+.box h4 {
+	font-size: 18px;
+	margin-bottom: 10px;
+	line-height: 1.4;
 }
-#intro p {
-	font-size: 20px;
+time {
+	color: #777;
+	font-size: 16px;
 }
 /**************************************        ******************************************/
 /**************************************        ******************************************/
@@ -359,11 +364,10 @@ section {
 .tour-stop {
 	max-width: 1170px;
 	width: 85%;
-	height: 20vh;
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
-	margin-top: 14vh;
+	margin-top: 12vh;
 	opacity: 0;
 	transition: opacity 0.3s linear;
 }
@@ -386,7 +390,7 @@ section {
 	display: inline-block;
 	transform: translate(0px, -10px);
 	}
-@media only screen and (max-width: 1024px), screen and (max-height: 700px){
+@media only screen and (max-width: 1024px), screen and (max-height: 730px){
 	#tour-stop-1 img {
 		width: 140px;
 	}
@@ -439,26 +443,232 @@ section {
 		margin-bottom: 20px;
 	}
 }
+/**********************************THOUGHTFUL DESIGN ANIMATION***********************************/
+#responsive-animation {
+	width: 100%;
+	max-width: 500px;
+	height: 290px;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: #f2f2f2;
+	margin-bottom: 3vh;
+	overflow: hidden;
+}
+#responsive-animation h1 {
+	font-size: 20px;
+	margin: 15px;
+	color: #777;
+}
+#responsive-animation h1::before {
+	content: 'Desktop';
+	animation-name: device-type-animation;
+	animation-duration: 9s;
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
+}
+#responsive-animation h2 {
+	font-size: 28px;
+	margin: 7px 0px;
+}
+#responsive-animation h3 {
+	font-size: 22px;
+}
+#responsive-animation p {
+	font-size: 16px;
+	margin: 3% 0%;
+}
+#responsive-animation-inner {
+	margin-right: auto;
+	margin-left: auto;
+	width: 90%;
+	height: 100%;
+	background-color: #d15353;
+	border-radius: 10px;
+	display: flex;
+	flex-wrap: wrap;
+	padding: 5px;
+	box-shadow: 0px 5px 9px #777;
+	animation: inner-grow 9s infinite alternate;
+}
+.responsive-animation-section {
+	border-radius: 6px;
+	width: 44%;
+	height: 190px;
+	margin: 3%;
+	text-align: left;
+	animation: section-grow 9s infinite alternate;
+}
+#responsive-animation-info {
+	color: #FFF;
+	height: auto;
+}
+#responsive-animation-info hr {
+	background-color: #FFF;
+	margin-bottom: 5px;
+	height: 1px;
+	border: none;
+}
+#responsive-animation a {
+	color: #FFF;
+	font-size: 14px;
+	background-color: #8e3030;
+	width: 55px;
+	padding: 7px 14px 4px;
+	margin: 5px 7px 5px 0px;
+	border-radius: 5px;
+	text-decoration: none;
+	display: inline-block;
+	user-select: none;
+	line-height: inherit;
+	text-align: center;
+	animation: button-animation 9s infinite alternate;
+}
+#responsive-animation a:hover {
+	background-color: #772828;
+}
+#example-button-fb:before {
+	content: 'Facebook';
+	animation: fb-animation 9s infinite alternate;
+}
+#example-button-li:before {
+	content: 'LinkedIn';
+	animation: li-animation 9s infinite alternate;
+}
+#responsive-animation-box {
+	background-color: #FFF;
+	color: #aaa;
+}
+#responsive-animation-box p, #responsive-animation-box h3 {
+	margin: 10px;
+}
+@keyframes device-type-animation {
+	0% {
+		content: 'Desktop';
+	}
+	5% {
+		content: 'Desktop';
+	}
+	45% {
+		content: 'Tablet';
+	}
+	55% {
+		content: 'Tablet';
+	}
+	95% {
+		content: 'Mobile';
+	}
+	100% {
+		content: 'Mobile';
+	}
+}
+@keyframes section-grow {
+	0% {
+		width: 44%;
+	}
+	7% {
+		width: 44%;
+	}
+	45% {
+		width: 94%;
+	}
+	100% {
+		width: 94%;
+	}
+}
+@keyframes inner-grow {
+	0% {
+		width: 90%;
+	}
+	5% {
+		width: 90%;
+	}
+	45% {
+		width: 65%;
+	}
+	55% {
+		width: 65%;
+	}
+	95% {
+		width: 40%;
+	}
+	100% {
+		width: 40%;
+	}
+}
+@keyframes fb-animation {
+	0% {
+		content: 'Facebook';
+		font-family: inherit;
+	}
+	55% {
+		content: 'Facebook';
+		font-family: inherit;
+	}
+	80% {
+		font-family: "Font Awesome 5 Brands";
+		font-weight: 400;
+		content: "\f082";
+	}
+	100% {
+		font-family: "Font Awesome 5 Brands";
+		font-weight: 400;
+		content: "\f082";
+	}
+}
+@keyframes li-animation {
+	0% {
+		content: 'LinkedIn';
+		font-family: inherit;
+	}
+	55% {
+		content: 'LinkedIn';
+		font-family: inherit;
+	}
+	80% {
+		font-family: "Font Awesome 5 Brands";
+		font-weight: 400;
+		content: "\f08c";
+	}
+	100% {
+		font-family: "Font Awesome 5 Brands";
+		font-weight: 400;
+		content: "\f08c";
+	}
+}
+@keyframes button-animation {
+	0% {
+		width: 59px;
+	}
+	55% {
+		width: 59px;
+	}
+	95% {
+		width: 33px;
+	}
+	100% {
+		width: 33px;
+	}
+}
 /**********************************TOUR BUTTONS***********************************/
 
 #back-next {
 	width: 100%;
 	text-align: center;
 	position: fixed;
-	bottom: 10vh;
+	bottom: 8vh;
 	user-select: none;
 }
 #back-next span {
 	border-radius: 3px;
 	display: inline-block;
 	padding: 5px 15px 2px;
+	width: 60px;
 }
 #back, #next {
 	cursor: pointer;
-	width: 60px;
 	font-size: 20px;
 	background-color: #1282e5;
-	color: white;
+	color: #FFF;
 }
 #back:hover, #next:hover {
 	background-color: #0e71c9;
@@ -467,7 +677,6 @@ section {
 	background-color: #0d5ea5;
 }
 #count {
-	width: 60px;
 	margin: 0px 13px;
 	font-size: 24px;
 }
@@ -476,7 +685,7 @@ section {
 	cursor: auto !important;
 	background-color: #80a7c9 !important;
 }
-@media only screen and (max-width: 1024px){
+@media only screen and (max-width: 1024px), screen and (max-height: 730px){
 	#back-next {
 		bottom: 5vh;
 	}
@@ -485,8 +694,7 @@ section {
 		font-size: 22px;
 	}
 	#back, #next {
-		cursor: pointer;
-		width: 56px;
+		width: 56px !important;
 		font-size: 18px;
 	}
 }
@@ -506,4 +714,8 @@ section {
 }
 #download a {
 	color: #d15353;
+	text-decoration: none;
+}
+#download a:hover {
+	color: #b53030;
 }
