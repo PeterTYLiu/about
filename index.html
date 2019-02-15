@@ -198,6 +198,26 @@
 						</div>
 					</div>
 				</div>
+				<script>
+					var facebook = document.getElementById('example-button-fb');
+					var linkedin = document.getElementById('example-button-li');
+					var deviceType = document.getElementById('device-type');
+					var lilContent = document.getElementById('responsive-animation-inner');
+					var maxWidth = 80;
+					function animateDemo() {
+						facebook.innerHTML = (facebook.offsetWidth > maxWidth) ? 'Facebook' : '<i class="fab fa-facebook-square"></i>';
+						linkedin.innerHTML = (linkedin.offsetWidth > maxWidth) ? 'LinkedIn' : '<i class="fab fa-linkedin"></i>';
+						let contentWidth = lilContent.offsetWidth;
+						if (contentWidth > 390) {
+							deviceType.innerHTML = 'Desktop';
+						} else if (contentWidth > 260) {
+							deviceType.innerHTML = 'Tablet';
+						} else {
+							deviceType.innerHTML = 'Mobile';
+						}
+					}
+					setInterval(animateDemo, 150);
+				</script>
 				<p>Responsive isn't good enough; I optimized this site for every device size - from 27-inch desktops to 4-inch phones - with thoughtful design that fits the use case.</p>
 				<p>"Mobile first" is <i>so</i> 2017.</p>
 			</div>
