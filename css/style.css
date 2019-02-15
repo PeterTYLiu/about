@@ -459,16 +459,10 @@ time {
 	margin: 15px;
 	color: #777;
 }
-#responsive-animation h1::before {
-	content: 'Desktop';
-	animation-name: device-type-animation;
-	animation-duration: 9s;
-	animation-direction: alternate;
-	animation-iteration-count: infinite;
-}
 #responsive-animation h2 {
 	font-size: 28px;
 	margin: 7px 0px;
+	font-weight: normal;
 }
 #responsive-animation h3 {
 	font-size: 22px;
@@ -526,40 +520,12 @@ time {
 #responsive-animation a:hover {
 	background-color: #772828;
 }
-#example-button-fb:before {
-	content: 'Facebook';
-	animation: fb-animation 9s infinite alternate;
-}
-#example-button-li:before {
-	content: 'LinkedIn';
-	animation: li-animation 9s infinite alternate;
-}
 #responsive-animation-box {
 	background-color: #FFF;
 	color: #aaa;
 }
 #responsive-animation-box p, #responsive-animation-box h3 {
 	margin: 10px;
-}
-@keyframes device-type-animation {
-	0% {
-		content: 'Desktop';
-	}
-	5% {
-		content: 'Desktop';
-	}
-	45% {
-		content: 'Tablet';
-	}
-	55% {
-		content: 'Tablet';
-	}
-	95% {
-		content: 'Mobile';
-	}
-	100% {
-		content: 'Mobile';
-	}
 }
 @keyframes section-grow {
 	0% {
@@ -593,46 +559,6 @@ time {
 	}
 	100% {
 		width: 40%;
-	}
-}
-@keyframes fb-animation {
-	0% {
-		content: 'Facebook';
-		font-family: inherit;
-	}
-	55% {
-		content: 'Facebook';
-		font-family: inherit;
-	}
-	80% {
-		font-family: "Font Awesome 5 Brands";
-		font-weight: 400;
-		content: "\f082";
-	}
-	100% {
-		font-family: "Font Awesome 5 Brands";
-		font-weight: 400;
-		content: "\f082";
-	}
-}
-@keyframes li-animation {
-	0% {
-		content: 'LinkedIn';
-		font-family: inherit;
-	}
-	55% {
-		content: 'LinkedIn';
-		font-family: inherit;
-	}
-	80% {
-		font-family: "Font Awesome 5 Brands";
-		font-weight: 400;
-		content: "\f08c";
-	}
-	100% {
-		font-family: "Font Awesome 5 Brands";
-		font-weight: 400;
-		content: "\f08c";
 	}
 }
 @keyframes button-animation {
