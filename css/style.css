@@ -367,7 +367,7 @@ time {
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
-	margin-top: 12vh;
+	margin-top: 8vh;
 	opacity: 0;
 	transition: opacity 0.3s linear;
 }
@@ -390,7 +390,7 @@ time {
 	display: inline-block;
 	transform: translate(0px, -10px);
 	}
-@media only screen and (max-width: 1024px), screen and (max-height: 730px){
+@media only screen and (max-width: 1024px), screen and (max-height: 800px){
 	#tour-stop-1 img {
 		width: 140px;
 	}
@@ -445,8 +445,7 @@ time {
 }
 /**********************************THOUGHTFUL DESIGN ANIMATION***********************************/
 #responsive-animation {
-	width: 100%;
-	max-width: 500px;
+	width: 500px;
 	height: 290px;
 	margin-right: auto;
 	margin-left: auto;
@@ -531,10 +530,10 @@ time {
 	0% {
 		width: 44%;
 	}
-	7% {
+	18% {
 		width: 44%;
 	}
-	45% {
+	23% {
 		width: 94%;
 	}
 	100% {
@@ -575,6 +574,26 @@ time {
 		width: 33px;
 	}
 }
+
+@media only screen and (max-width: 590px), screen and (max-height: 660px){
+	#responsive-animation{ 
+		display: none;
+	}
+}
+/**********************************THOUGHTFUL DESIGN VIDEO***********************************/
+
+video {
+	display: none;
+	width: 100%;
+	max-width: 400px; 
+	margin-left: auto;
+	margin-right: auto;
+}
+@media only screen and (max-width: 590px), screen and (max-height: 660px){
+	video {
+		display: inherit;
+	}
+}
 /**********************************TOUR BUTTONS***********************************/
 
 #back-next {
@@ -611,7 +630,7 @@ time {
 	cursor: auto !important;
 	background-color: #80a7c9 !important;
 }
-@media only screen and (max-width: 1024px), screen and (max-height: 730px){
+@media only screen and (max-width: 1024px), screen and (max-height: 800px){
 	#back-next {
 		bottom: 5vh;
 	}
