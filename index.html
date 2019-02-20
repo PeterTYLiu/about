@@ -81,6 +81,7 @@
 					tourStop1.classList.add('show');
 					document.getElementById('count').innerHTML='1/6';
 				}
+				document.getElementById('back').classList.add('grey');
 			}
 			function endTour() {
 				document.getElementById('overlay').style.visibility='hidden';
@@ -88,6 +89,7 @@
 				document.getElementById('content').style.filter='inherit';
 				document.getElementById('intro').style.filter='inherit';
 				document.getElementById('download').style.filter='inherit';
+				document.getElementById('next').classList.remove('grey');
 			}
 			function collapseBox(event) {
 				let button = event.target;
@@ -147,9 +149,7 @@
 				if (currentStopNumber == 2) {
 					document.getElementById('back').classList.add('grey');
 				}
-				if (document.getElementById('next').classList.contains('grey')) {
-					document.getElementById('next').classList.remove('grey');
-				}
+				document.getElementById('next').classList.remove('grey');
 			}
 		</script>
 	</head>
@@ -222,18 +222,34 @@
 					}
 					setInterval(animateDemo, 150);
 				</script>
-				<p>Responsive isn't good enough; I optimized this site for every device size - from 27-inch desktops to 4-inch phones - with thoughtful design that fits the use case.</p>
-				<p>"Mobile first" is <i>so</i> 2017.</p>
+				<p>Responsive isn't good enough; I optimized this site for every device size - from 27-inch desktops to 4-inch phones - with thoughtful design that fits the use case. "Mobile first" is <i>so</i> 2017.</p>
 			</div>
 			<div class="tour-stop hidden" id="tour-stop-5">
-				<h1>Under Construction!</h1>
-				<h4>5555555 5555555 555555555555555 55555</h4>
-				<h4>Neat animations</h4>
+				<h1>Animations that Delight</h1>
+				<div id='delightful-animation'>
+					<div id='cube' onclick='delight()'>
+						<div class='face face--front'>Click Me!</div>
+						<div class='face face--back'>Whoa!</div>
+						<div class='face face--top'>Keep Clicking!</div>
+						<div class='face face--bottom'>Neat!</div>
+						<div class='face face--left'>Whoosh!</div>
+						<div class='face face--right'>Hello there!</div>
+					</div>
+				</div>
+				<script>
+					var cube = document.getElementById('cube');
+					function delight() {
+						let num1 = (Math.floor(Math.random() * 2)+1)*90;
+						let num2 = Math.floor(Math.random() * 3)*90;
+						let num3 = Math.floor(Math.random() * 3)*90;
+						cube.style.transform=('translateZ(-100px) rotateY(' + num1 + 'deg) rotateX(' + num2 + 'deg) rotateZ(' + num3 + 'deg)');
+					}
+				</script>
+				<p>Beautiful, thoughtful animations are built into every page and interaction. Written using CSS animations, CSS transitions, and Javascript, these animations work across all browsers and platforms.</p>
 			</div>
 			<div class="tour-stop hidden" id="tour-stop-6">
-				<h1>Under Construction!</h1>
-				<h4>66666 666666666 666666 666666666 666</h4>
-				<h4>thanks for visiting!</h4>
+				<h1>Thanks for dropping by!</h1>
+				<p>66666 666666666 666666 666666666 666</p>
 				<button onclick='endTour(); this.innerHTML=("Bye!");'>Exit tour</button>
 			</div>
 			<div id='back-next'>
