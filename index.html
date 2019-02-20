@@ -82,6 +82,7 @@
 					document.getElementById('count').innerHTML='1/6';
 				}
 				document.getElementById('back').classList.add('grey');
+				document.querySelector('.end-tour-button').innerHTML=('Exit tour');
 			}
 			function endTour() {
 				document.getElementById('overlay').style.visibility='hidden';
@@ -192,8 +193,8 @@
 							<h2>Peter Liu</h2>
 							<p>▮▮ ▮▮▮ ▮ ▮▮▮▮ ▮ ▮▮ ▮▮▮ ▮</p>
 							<hr />
-							<a id='example-button-fb' href="https://www.facebook.com/peter.liu.583" target="_blank"></a>
-							<a id='example-button-li' href="https://www.linkedin.com/in/peter-ty-liu/" target="_blank"></a>
+							<a id='example-button-fb' class='btn' href="https://www.facebook.com/peter.liu.583" target="_blank"></a>
+							<a id='example-button-li' class='btn' href="https://www.linkedin.com/in/peter-ty-liu/" target="_blank"></a>
 						</div>
 						<div class='responsive-animation-section' id='responsive-animation-box'>
 							<h3>▮▮ ▮▮▮</h3>
@@ -249,8 +250,13 @@
 			</div>
 			<div class="tour-stop hidden" id="tour-stop-6">
 				<h1>Thanks for dropping by!</h1>
-				<p>66666 666666666 666666 666666666 666</p>
-				<button onclick='endTour(); this.innerHTML=("Bye!");'>Exit tour</button>
+				<p>If you liked what you saw, let's get in touch! Or you can exit the tour to read more of my résumé.</p>
+				<div id='exit-buttons'>
+					<a class='btn btn-exit' href="https://www.linkedin.com/in/peter-ty-liu/" target="_blank">LinkedIn</a>
+					<a class='btn btn-exit' href="mailto:Peter.TY.Liu@gmail.com">Email</a>
+					<a class='btn btn-exit' href="https://peterliu.myportfolio.com/" target="_blank">Portfolio</a>
+				</div>
+				<span class='btn end-tour-button' onclick='endTour(); this.innerHTML=("Bye!");'>Exit tour</span>
 			</div>
 			<div id='back-next'>
 				<span id='back' onclick='back()' class='grey'> &lt; back </span><span id='count'>1/6</span><span id='next' onclick='next()'> next > </span>
@@ -259,7 +265,7 @@
 		<div id="intro" style="height: auto;">
 			<h1>Welcome to My Microsite!</h1>
 			<p>Why read my résumé when I can show you my skills?<br />See how I made this site from scratch!</p>
-			<span id="take-the-tour-button" onclick="startTour()">TAKE&nbsp;THE&nbsp;TOUR&nbsp;▶</span>
+			<span id="take-the-tour-button" class='btn' onclick="startTour()">TAKE&nbsp;THE&nbsp;TOUR&nbsp;▶</span>
 		</div>
 		<div id="content">
 			<div class="column">
@@ -270,15 +276,17 @@
 					<hr />
 					<a href="tel:647-986-5086">647-986-5086</a><br />
 					<a href="mailto:Peter.TY.Liu@gmail.com">Peter.TY.Liu@gmail.com</a><br />
-					<a class="social-link facebook" href="https://www.facebook.com/peter.liu.583" target="_blank"></a>
-					<a class="social-link linkedin" href="https://www.linkedin.com/in/peter-ty-liu/" target="_blank"></a>
-					<a class="social-link social-link-last" href="https://peterliu.myportfolio.com/" target="_blank">Portfolio</a>
+					<a class="social-link facebook btn" href="https://www.facebook.com/peter.liu.583" target="_blank"></a>
+					<a class="social-link linkedin btn" href="https://www.linkedin.com/in/peter-ty-liu/" target="_blank"></a>
+					<a class="social-link btn" href="https://petertyliu.github.io/about/" target="_blank">Website</a>
+					<a class="social-link social-link-last btn" href="https://peterliu.myportfolio.com/" target="_blank">Portfolio</a>
+					
 				</section>
 				<section id="experience" class="box">
 					<h3><span class='icon' id='experienceIcon'></span>Experience</h3><i class="collapse-button fas fa-minus-circle" onclick="collapseBox(event)"></i>
 					<h4>Fairfax Financial, FairVentures Innovation Lab / <span class='company'>UX Designer</span></h4>
 					<time>SEPT - DEC 2017,  KITCHENER, ON</time>
-					<p>Ideated and designed mobile apps utilizing emerging technologies; created interactive high-fidelity prototypes using Figma, and user-tested with stakeholders; created microsite for internal hackathon; participated in several design sprints</p>
+					<p>Created interactive high-fidelity app prototypes using Figma. Conducted interviews and user-testing of app with stakeholders; created personas based on interviews. Created microsite for internal hackathon; participated in several design sprints</p>
 					<h4>Clear Spider / <span class='company'>UI/UX Designer</span></h4>
 					<time>MAY - AUG 2017,  MISSISSAUGA, ON</time>
 					<p>Completed thorough usability assessment and UI/UX redesign of the company’s software platform, created multiple iterative interactive prototypes using Adobe XD and PHP on XAMPP</p>
@@ -288,6 +296,10 @@
 					<h4>City of Kingston / <span class='company'>GIS Intern</span></h4>
 					<time>JAN - APR 2016,  KINGSTON, ON</time>
 					<p>Designed city’s upcoming open data portal; created large-scale infographic campaign regarding open data initiative</p>
+					<hr style='margin-top: 11px; margin-bottom: 15px;'>
+					<h4>Personal / <span class='company'>Freelance Work</span></h4>
+					<time>2012 - PRESENT</time>
+					<p>Designed and created websites, apps, and graphic assets for a variety of freelance projects.</p>
 				</section>	
 			</div>
 			<div class="column">
