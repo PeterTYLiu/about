@@ -9,15 +9,22 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 		<link rel="stylesheet" href="css/factory.css" >
+		<style>
+			@media only screen and (min-width: 701px) {
+				#factory{ 
+					transform-origin: 50% 0%;
+					transform: scale(1.7, 1.7);
+				}
+			}
+		</style>
 	</head>
 	
 	<body>
 		<div id='introductory'>
 			<h2>Responsive Animation with CSS3 and HTML5</h2>
 			<h3>No Javascript or CSS libraries here, boss!</h3>
-			<p>Visit <a href='https://petertyliu.github.io/about/'>my site</a>!</p>
 		</div>
-		<div id='factory' style='transform-origin: 50% 0%; transform: scale(1.7, 1.7);'>
+		<div id='factory'>
 			<div id='boiler'></div>
 			<div id='boiler-grate'></div>
 			<div class='grate-hole grate-hole1'></div>
