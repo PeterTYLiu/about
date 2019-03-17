@@ -14,11 +14,13 @@
 	height: 40vw;
 	width: 60vw;
 	margin: 0px auto 0px auto;
+	max-width: 501px;
+	max-height: 334px;
 }
 @media only screen and (max-width: 700px) {
 	#factory{ 
-		width: 99vw;
-		height: 66vw;
+		width: 90vw;
+		height: 60vw;
 	}
 }
 #boiler {
