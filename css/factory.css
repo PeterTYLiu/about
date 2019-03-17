@@ -1,0 +1,329 @@
+:root {
+	--pump-speed: 1s;
+	--pump-curve: ease-in;
+}
+#factory {
+	position: relative;
+	height: 40vw;
+	width: 60vw;
+	border: 1px solid black;
+	margin: 100px auto 0px auto;
+	overflow: hidden;
+}
+#boiler {
+	height: 62.5%;
+	width: 15%;
+	background: url('../images/boiler.png') no-repeat center/contain ;
+	position: absolute;
+	left: 25%;
+	top: 15%;
+}
+#boiler-grate {
+	height: 18%;
+	width: 12%;
+	position: absolute;
+	left: 26.5%;
+	top: 40%;
+	background-color: #aaa;
+	border-radius: 50%;
+}
+.grate-hole {
+	position: absolute;
+	height: 11%;
+	width: 1.5%;
+	border-radius: 4px;
+	top: 43.5%;
+	animation: fire 6s infinite ease-in-out;
+	background-color: #af240c;
+	box-shadow: 0px 0px 3px 3px rgba(175, 36, 12, 0.3);
+}
+.grate-hole1 {
+	left: 29%;
+}
+.grate-hole2 {
+	left: 31.7%;
+}
+.grate-hole3 {
+	left: 34.4%;
+}
+#grate-hinge {
+	height: 7.3%;
+	width: 1.2%;
+	position: absolute;
+	left: 26.2%;
+	top: 45%;
+	background-color: #c3c3c3;
+}
+#boiler-legs {
+	height: 15%;
+	width: 20%;
+	position: absolute;
+	left: 20%;
+	top: 75%;
+	background: url('../images/boiler-legs.png') no-repeat center/contain ;
+	z-index: -10;
+}
+#boiler-tube {
+	height: 15%;
+	width: 20%;
+	position: absolute;
+	left: 20%;
+	top: 75%;
+	background: url('../images/boiler-tube.png') no-repeat center/contain ;
+	z-index: -15;
+	animation: bloat var(--pump-speed) var(--pump-curve) infinite alternate;
+	transform-origin: 45% 55%;
+}
+.chimney {
+	height: 27.5%;
+	width: 12.5%;
+	background: url('../images/chimney.png') no-repeat center/contain ;
+	position: absolute;
+	left: 12.5%;
+	top: 20%;
+	z-index: 10;
+}
+#smoke {
+	height: 30%;
+	width: 4.5%;
+	background: url('../images/smoke.png') no-repeat center/contain ;
+	position: absolute;
+	left: 13%;
+	top: 22%;
+	z-index: -10;
+	animation: spew 1s infinite linear;
+}
+#pump{
+	height: 30%;
+	width: 10%;
+	position: absolute;
+	left: 12.5%;
+	top: 55%;
+	animation: scalePump var(--pump-speed) var(--pump-curve) infinite alternate;
+	transform-origin: 50% 100%;
+}
+#pump-cover {
+	height: 40%;
+	width: 12.5%;
+	position: absolute;
+	left: 11.25%;
+	top: 50%;
+	background: url('../images/pump-cover.png') no-repeat center/contain ;
+	z-index: 20;
+}
+#pump-thruster {
+	height: 12%;
+	width: 11%;
+	position: absolute;
+	left: 12%;
+	top: 55%;
+	background-color: #888;
+	animation: pumpThrust var(--pump-speed) var(--pump-curve) infinite alternate;
+	transform-origin: 50% 0%;
+}
+#pump div {
+	height: 8.34%;
+	width: 100%;
+	clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
+}
+#pump div:nth-child(odd) {
+	background-color: #2574ba;
+	transform: rotate(180deg);
+	animation: pump var(--pump-speed) var(--pump-curve) infinite alternate, pumpBottom var(--pump-speed) var(--pump-curve) infinite alternate;
+}
+#pump div:nth-child(even) {
+	background-color: #4d8bc1;
+	animation: pump var(--pump-speed) var(--pump-curve) infinite alternate, pumpTop var(--pump-speed) var(--pump-curve) infinite alternate;
+}
+#connector {
+	height: 25%;
+	width: 10%;
+	position: absolute;
+	left: 40%;
+	top: 45%;
+	background: url('../images/connector.png') no-repeat center/contain ;
+	z-index: -10;
+}
+#handgear {
+	height: 50%;
+	width: 15%;
+	background: url('../images/handgear.png') no-repeat center/contain ;
+	position: absolute;
+	left: 57.5%;
+	top: 5%;
+	z-index: -10;
+	animation: wave 1.1s infinite alternate ease-in-out;
+	transform-origin: 50% 79%;
+}
+#gear {
+	height: 16.5%;
+	width: 11%;
+	background: url('../images/gear.png') no-repeat center/contain ;
+	position: absolute;
+	left: 72%;
+	top: 38%;
+	z-index: -10;
+	animation: wave 1.1s infinite alternate-reverse ease-in-out;
+	transform-origin: 50% 50%;
+}
+#body {
+	height: 40%;
+	width: 40%;
+	position: absolute;
+	left: 45%;
+	top: 40%;
+	background: url('../images/body.png') no-repeat center/contain;
+	z-index: 10;
+	animation: shake 2s infinite;
+}
+#body-leg {
+	height: 15%;
+	width: 10%;
+	position: absolute;
+	left: 60%;
+	top: 75%;
+	background: url('../images/bodyleg.png') no-repeat center/contain;
+	z-index: -10;
+}
+.piston-sheath {
+	position: absolute;
+	left: 82.5%;
+	height: 5%;
+	width: 3.75%;
+	background: url('../images/piston-sheath.png') no-repeat center/contain;
+}
+.piston-sheath1 {
+	top: 45%;
+}
+.piston-sheath2 {
+	top: 55%;
+}
+.piston-sheath3 {
+	top: 65%;
+}
+.piston {
+	position: absolute;
+	left: 80%;
+	height: 5%;
+	width: 7.5%;
+	background: url('../images/piston.png') no-repeat center/contain;
+	z-index: -20;
+	animation: piston 0.9s infinite alternate ease-out;
+}
+.piston1 {
+	top: 45%;
+}
+.piston2 {
+	top: 55%;
+	animation-delay: 0.2s;
+}
+.piston3 {
+	top: 65%;
+	animation-delay: 0.4s;
+}
+#gauge {
+	position: absolute;
+	left: 35%;
+	top: 17.5%;
+	height: 7.5%;
+	width: 5%;
+	background: url('../images/gauge.png') no-repeat center/contain;
+	z-index: 20;
+}
+#gauge-needle {
+	position: absolute;
+	left: 37.25%;
+	top: 19%;
+	height: 3%;
+	width: 0.5%;
+	background: url('../images/gauge-needle.png') no-repeat center/contain;
+	z-index: 20;
+	animation: gauge 1.3s infinite alternate;
+	transform-origin: 50% 90%;
+}
+@keyframes spew {
+	0% {
+
+	}
+	30% {
+		transform: translateY(-35%) scale(1);
+	}
+	100% {
+		opacity: 0;
+		transform: translateY(-110%) scale(2.2);
+	}
+}
+@keyframes pump {
+	from {clip-path: polygon(5% 0%, 95% 0%, 100% 100%, 0% 100%);}
+	to {clip-path: polygon(16% 0%, 84% 0%, 100% 100%, 0% 100%);}
+}
+@keyframes pumpTop {
+	from {background-color: #4d8bc1;}
+	to {background-color: #5e93c1;}
+}
+@keyframes pumpBottom {
+	from {background-color: #2574ba;}
+	to {background-color: #1069b7;}
+}
+@keyframes scalePump {
+	from {transform: scaleY(1);}
+	to {transform: scaleY(0.6);}
+}
+@keyframes pumpThrust {
+	from {transform: scaleY(0);}
+	to {transform: scaleY(1);}
+}
+@keyframes wave {
+	from {transform: rotate(-40deg);}
+	to {transform: rotate(40deg);}
+}
+@keyframes fire {
+	0% {
+		background-color: #af240c;
+		box-shadow: 0px 0px 3px 3px rgba(175, 36, 12, 0.3);
+	}
+	25% {
+		background-color: #d80000;
+		box-shadow: 0px 0px 4px 2px rgba(216, 0, 0, 0.1);
+	}
+	50% {
+		background-color: #b75e05;
+		box-shadow: 0px 0px 2px 4px rgba(183, 94, 5, 0.2);
+	}
+	75% {
+		background-color: #e24822;
+		box-shadow: 0px 0px 4px 2px rgba(226, 72, 34, 0.1);
+	}
+	100% {
+		background-color: #af240c;
+		box-shadow: 0px 0px 3px 3px rgba(175, 36, 12, 0.3);
+	}
+}
+@keyframes bloat {
+	from {transform: scale(1, 1);}
+	to {transform: scale(1.05, 1.05);}
+}
+@keyframes piston {
+	0% {transform: translateX(0);}
+	20% {transform: translateX(0);}
+	100% {transform: translateX(60%);}
+}
+@keyframes gauge {
+	0% {transform: rotate(-40deg);}
+	21% {transform: rotate(-12deg);}
+	37% {transform: rotate(40deg);}
+	51% {transform: rotate(-70deg);}
+	76% {transform: rotate(12deg);}
+	90% {transform: rotate(72deg);}
+	100% {transform: rotate(-34deg);}
+}
+@keyframes shake {
+	0% {transform: rotate(0deg);}
+	40% {transform: rotate(0deg);}
+	45% {transform: rotate(2deg);}
+	48% {transform: rotate(-2deg);}
+	50% {transform: rotate(1deg);}
+	52% {transform: rotate(-1deg);}
+	55% {transform: rotate(0deg);}
+	100% {transform: rotate(0deg);}
+}
