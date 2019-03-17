@@ -1,14 +1,6 @@
 <!doctype html>
 <html lang="en">
 	<head>
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-136109420-1"></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
-			gtag('js', new Date());
-			gtag('config', 'UA-136109420-1');
-		</script>
 		<title>Peter's Résumé Microsite</title>
 		<meta name="author" content="Peter Liu">
 		<meta name="description" content="Check out my sick design and web skills">
@@ -18,61 +10,62 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 		<link rel="stylesheet" href="css/style.css" >
+		<link rel="stylesheet" href="css/factory.css" >
 		<script>
 			const tourStopStart = {
-				TSS_1:	function() {console.log('On one!');},
-				TSS_2:	function() {
-							let lines = document.getElementsByClassName('code-line');
-							for (i = 0; i < lines.length; i++) {
-								let line = lines[i];
-								let time = 300*i;
-								setTimeout(function(){
-									line.style.opacity='1';
-									line.classList.add('animated');
-									line.classList.add('slideInLeft');
-								}, time);
-							}
-							setTimeout(function(){
-								let blues = document.getElementsByClassName('tag');
-								for (i = 0; i < blues.length; i++) {
-									blues[i].style.color='#00e8ff';
-								}
-								document.getElementById('class').style.color='#ecf400';
-								document.getElementById('green').style.color='#21ff00';
-							}, lines.length*300 + 700);
-						},
-				TSS_3:	function() {
-							setTimeout(function(){
-								document.getElementById('arrowdiv').style.backgroundSize = '100% 100%';
-							}, 350);
-						},
-				TSS_4:	function() {console.log('On four!');},
-				TSS_5:	function() {console.log('On five!');},
-				TSS_6:	function() {console.log('On six!');}
+				TSS_1() {console.log('On one!');},
+				TSS_2() {
+					let lines = document.getElementsByClassName('code-line');
+					for (i = 0; i < lines.length; i++) {
+						let line = lines[i];
+						let time = 300*i;
+						setTimeout(function(){
+							line.style.opacity='1';
+							line.classList.add('animated');
+							line.classList.add('slideInLeft');
+						}, time);
+					}
+					setTimeout(function(){
+						let blues = document.getElementsByClassName('tag');
+						for (i = 0; i < blues.length; i++) {
+							blues[i].style.color='#00e8ff';
+						}
+						document.getElementById('class').style.color='#ecf400';
+						document.getElementById('green').style.color='#21ff00';
+					}, lines.length*300 + 700);
+				},
+				TSS_3() {
+					setTimeout(function(){
+						document.getElementById('arrowdiv').style.backgroundSize = '100% 100%';
+					}, 350);
+				},
+				TSS_4() {console.log('On four!');},
+				TSS_5() {console.log('On five!');},
+				TSS_6() {console.log('On six!');}
 			};
 			const tourStopEnd = {
-				TSE_1:	function() {console.log('Left one!');},
-				TSE_2:	function() {
-							let lines = document.getElementsByClassName('code-line');
-							for (i = 0; i < lines.length; i++) {
-								let line = lines[i];
-								line.style.opacity='0';
-								line.classList.remove('animated');
-								line.classList.remove('slideInLeft');
-							}
-							let blues = document.getElementsByClassName('tag');
-							for (i = 0; i < blues.length; i++) {
-								blues[i].style.color='#fff';
-							}
-							document.getElementById('class').style.color='#fff';
-							document.getElementById('green').style.color='#fff';
-						},
-				TSE_3:	function() {
-							document.getElementById('arrowdiv').style.backgroundSize = '0% 100%';
-						},
-				TSE_4:	function() {console.log('Left four!');},
-				TSE_5:	function() {console.log('Left five!');},
-				TSE_6:	function() {console.log('Left six!');}
+				TSE_1() {console.log('Left one!');},
+				TSE_2() {
+					let lines = document.getElementsByClassName('code-line');
+					for (i = 0; i < lines.length; i++) {
+						let line = lines[i];
+						line.style.opacity='0';
+						line.classList.remove('animated');
+						line.classList.remove('slideInLeft');
+					}
+					let blues = document.getElementsByClassName('tag');
+					for (i = 0; i < blues.length; i++) {
+						blues[i].style.color='#fff';
+					}
+					document.getElementById('class').style.color='#fff';
+					document.getElementById('green').style.color='#fff';
+				},
+				TSE_3() {
+					document.getElementById('arrowdiv').style.backgroundSize = '0% 100%';
+				},
+				TSE_4() {console.log('Left four!');},
+				TSE_5() {console.log('Left five!');},
+				TSE_6() {console.log('Left six!');}
 			};
 			function startTour() {
 				let tourStop1 = document.getElementById('tour-stop-1');
@@ -170,7 +163,7 @@
 				<span onclick="endTour()" id="closeButton"><i class="fas fa-times"></i> Exit</span>
 			</div>
 			<div class="tour-stop show" id="tour-stop-1">
-				<img src='images/peter2.png' alt='A drawing of me!' />
+				<img src='images/peter2.png' alt='A photo of me!' />
 				<h1>I'm Peter, and I make cool&nbsp;stuff<br /><span class='subtitle'>(like this website!)</span></h1>
 				<p>I'll use this site as an example of how I build great digital experiences.</p>
 			</div>
@@ -261,6 +254,47 @@
 			</div>
 			<div class="tour-stop hidden" id="tour-stop-6">
 				<h1>Thanks for dropping by!</h1>
+				<div id='factory'>
+						<div id='boiler'></div>
+						<div id='boiler-grate'></div>
+						<div class='grate-hole grate-hole1'></div>
+						<div class='grate-hole grate-hole2'></div>
+						<div class='grate-hole grate-hole3'></div>
+						<div id='grate-hinge'></div>
+						<div class='chimney'></div>
+						<div id='smoke'></div>
+						<div id='pump-cover'></div>
+						<div id='pump-thruster'></div>
+						<div id='pump'>
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+						</div>
+						<div id='boiler-legs'></div>
+						<div id='boiler-tube'></div>
+						<div id='gauge'></div>
+						<div id='gauge-needle'></div>
+						<div id='connector'></div>
+						<div id='handgear'></div>
+						<div id='gear'></div>
+						<div id='body'></div>
+						<div id='body-leg'></div>
+						<div class='piston-sheath piston-sheath1'></div>
+						<div class='piston-sheath piston-sheath2'></div>
+						<div class='piston-sheath piston-sheath3'></div>
+						<div class='piston piston1'></div>
+						<div class='piston piston2'></div>
+						<div class='piston piston3'></div>
+					</div>
 				<p>If you liked what you saw, let's get in touch! Or you can exit the tour to read more of my résumé.</p>
 				<div id='exit-buttons'>
 					<a class='btn btn-exit' href="https://www.linkedin.com/in/peter-ty-liu/" target="_blank">LinkedIn</a>
