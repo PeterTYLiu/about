@@ -68,11 +68,11 @@
 	background-color: #c3c3c3;
 }
 #boiler-legs {
-	height: 15%;
-	width: 20%;
+	height: 18%;
+	width: 24%;
 	position: absolute;
-	left: 20%;
-	top: 75%;
+	left: 18%;
+	top: 72%;
 	background: url('../images/boiler-legs.png') no-repeat center/contain ;
 	z-index: -10;
 }
